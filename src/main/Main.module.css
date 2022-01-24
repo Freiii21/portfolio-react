@@ -1,0 +1,22 @@
+.main{
+    height: 100vh;
+    background-color: #e5f6a7;
+}
+.container{
+    border: 1px solid;
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.greeting{
+    width: 300px;
+    background-color: #53734b;
+}
+.photo{
+    width: 300px;
+    height: 400px;
+    background-color: #a7f6ef;
+}
