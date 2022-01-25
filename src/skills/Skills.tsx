@@ -9,9 +9,9 @@ export const Skills = () => {
             <div className={`${sc.container} ${s.skillsContainer}`}>
                 <h2 className={s.title}>Skills</h2>
                 <div className={s.skillsSet}>
-                    <Skill title='JS' description='Qwerty Qwerty Qwerty'/>
-                    <Skill title='CSS' description='Styles Styles Styles Styles Styles Styles Styles Styles Styles'/>
-                    <Skill title='REACT' description='Text Text Text'/>
+                    <Skill title='JS' description='Some description...'/>
+                    <Skill title='CSS' description='Some description with a loooooong string...'/>
+                    <Skill title='REACT' description='Some description...'/>
                 </div>
             </div>
         </div>
