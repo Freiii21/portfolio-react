@@ -2,7 +2,6 @@
     height: 100vh;
     background-color: #f2cff6;
 }
-
 .projectsContainer{
     flex-direction: column;
     justify-content: flex-start;

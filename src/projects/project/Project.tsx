@@ -10,7 +10,7 @@ export const Project = (props: ProjectPropsType) => {
     return (
         <div className={s.project}>
             <div className={s.icon}>
-                <button>Смотреть</button>
+                <button>Open project</button>
             </div>
             <h3 className={s.title}>{props.title}</h3>
             <span className={s.description}>{props.description}</span>
