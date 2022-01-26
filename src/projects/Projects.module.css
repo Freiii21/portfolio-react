@@ -5,6 +5,7 @@
 .projectsContainer{
     flex-direction: column;
     justify-content: flex-start;
+    flex-wrap: nowrap;
 }
 .title{
     background-color: #c0bdbd;
