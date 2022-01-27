@@ -13,6 +13,9 @@ export const Footer = () => {
                 <div className={s.icon}></div>
                 <div className={s.icon}></div>
             </div>
+            <div>
+                <span>© 2022 All rights reserved</span>
+            </div>
         </div>
     );
 }

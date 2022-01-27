@@ -1,5 +1,5 @@
 .skills{
-    height: 100vh;
+    min-height: 100vh;
     background-color: #c8d5f1;
 }
 .skillsContainer{
@@ -10,9 +10,10 @@
     background-color: #c0bdbd;
 }
 .skillsSet{
+    margin-top: 50px;
     border: 1px solid;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
 }

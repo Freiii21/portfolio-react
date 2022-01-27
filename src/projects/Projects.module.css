@@ -1,19 +1,19 @@
 .projects{
-    height: 100vh;
+    min-height: 100vh;
     background-color: #f2cff6;
 }
 .projectsContainer{
     flex-direction: column;
     justify-content: flex-start;
-    flex-wrap: nowrap;
 }
 .title{
     background-color: #c0bdbd;
 }
 .projectsSet{
+    margin-top: 50px;
     border: 1px solid;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
 }

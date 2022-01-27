@@ -1,12 +1,12 @@
 .header {
     height: 80px;
     background-color: teal;
-    border: 1px solid;
     display: flex;
     align-items: center;
 }
 
 .headerContainer {
+    background-color: #c0bdbd;
     width: 80%;
     max-width: 1200px;
     margin: 0 auto;

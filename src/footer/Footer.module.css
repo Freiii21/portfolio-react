@@ -1,12 +1,13 @@
 .footer {
-    height: 130px;
+    height: 140px;
     background-color: #048a8a;
-    border: 1px solid;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
 }
 .footerContainer {
+    background-color: #c0bdbd;
     border: 1px solid;
     width: 320px;
     display: flex;
