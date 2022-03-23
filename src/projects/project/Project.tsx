@@ -1,7 +1,8 @@
-import React from 'react';
-import s from './Project.module.css'
+import React, {CSSProperties} from 'react';
+import s from './Project.module.scss'
 
 type ProjectPropsType = {
+    style: CSSProperties | undefined
     title: string
     description: string
 }
@@ -9,9 +10,8 @@ type ProjectPropsType = {
 export const Project = (props: ProjectPropsType) => {
     return (
         <div className={s.project}>
-            <div className={s.icon}>
+            <div className={s.icon} style={props.style}>
                 <a href="">Open project</a>
-                {/*<button>Open project</button>*/}
             </div>
             <h3 className={s.title}>{props.title}</h3>
             <span className={s.description}>{props.description}</span>
