@@ -12,7 +12,6 @@
     background-size: cover;
     background-position: center;
     position: relative;
-
 }
 .main::before{
     position: absolute;
@@ -54,13 +53,30 @@
     z-index: 1;
     margin-bottom: 24vh;
 }
-@media screen and (max-width: 414px){
-    .greetingField{
-        margin-left: 30px;
-    }
+@media screen and (max-width: 890px){
     .name{
         font-size: 44px;
         margin-top: 10px;
         margin-bottom: 10px;
+    }
+}
+@media screen and (max-width: 777px){
+    .greetingField {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .photo{
+        margin-top: -145px;
+    }
+}
+@media screen and (max-width: 414px){
+    .name{
+        font-size: 44px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .photo{
+        margin-top: -140px;
     }
 }
