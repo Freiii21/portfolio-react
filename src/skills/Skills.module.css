@@ -1,16 +1,12 @@
 .skills{
     min-height: 100vh;
-    background-color: #c8d5f1;
+    background-color: #f2f2f2;
 }
 .skillsContainer{
     flex-direction: column;
     justify-content: flex-start;
 }
-.title{
-    background-color: #c0bdbd;
-}
 .skillsSet{
-    margin-top: 50px;
     border: 1px solid;
     width: 100%;
     display: flex;

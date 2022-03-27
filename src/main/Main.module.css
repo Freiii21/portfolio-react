@@ -1,13 +1,63 @@
+/*@font-face {*/
+/*    font-family: Raleway-Black;*/
+/*    src: url('../common/styles/fonts/Raleway-Black.ttf')*/
+/*}*/
+/*@font-face {*/
+/*    font-family: Raleway-regular;*/
+/*    src: url('./../common/styles/fonts/Raleway-Regular.ttf')*/
+/*}*/
+
 .main{
-    height: 100vh;
-    background-color: #e5f6a7;
+    height: 93vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.main::before{
+    position: absolute;
+    content: "";
+    background-color: black;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.6;
+}
+.greetingField{
+    min-width: 320px;
+    z-index: 1;
+    color: white;
 }
 .greeting{
-    width: 300px;
-    background-color: #53734b;
+    font-family: Raleway-regular, sans-serif;
+    font-size: 24px;
+}
+.name{
+    font-family: Raleway-Black, sans-serif;
+    font-size: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.occupation{
+    font-family: Raleway-regular, sans-serif;
+    font-size: 24px;
 }
 .photo{
     width: 300px;
     height: 400px;
-    background-color: #a7f6ef;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    box-shadow: 0 0 3px white;
+    z-index: 1;
+}
+@media screen and (max-width: 414px){
+    .greetingField{
+        margin-left: 30px;
+    }
+    .name{
+        font-size: 44px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
 }

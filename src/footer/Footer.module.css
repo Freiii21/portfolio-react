@@ -1,10 +1,15 @@
+/*@font-face {*/
+/*    font-family: Raleway-Black;*/
+/*    src: url('../common/styles/fonts/Raleway-Black.ttf')*/
+/*}*/
+/*@font-face {*/
+/*    font-family: Raleway-regular;*/
+/*    src: url('./../common/styles/fonts/Raleway-Regular.ttf')*/
+/*}*/
 .footer {
-    height: 140px;
-    background-color: #048a8a;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
 }
 .footerContainer {
     background-color: #c0bdbd;
@@ -17,4 +22,16 @@
     background-color: dimgrey;
     width:45px;
     height:45px;
+}
+.name{
+    font-family: Raleway-Black, sans-serif;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.coperights{
+    font-family: Raleway-regular, sans-serif;
+    font-size: 17px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }

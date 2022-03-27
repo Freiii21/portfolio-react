@@ -1,11 +1,9 @@
 .projects{
     min-height: 100vh;
-    background-color: #f2cff6;
     .projectsContainer{
         flex-direction: column;
         justify-content: flex-start;
         .projectsSet{
-            margin-top: 50px;
             border: 1px solid;
             width: 100%;
             display: flex;

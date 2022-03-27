@@ -14,7 +14,7 @@ export const Projects = () => {
     return (
         <div className={s.projects}>
             <div className={`${sc.container} ${s.projectsContainer}`}>
-                <Title value={"Project"}/>
+                <Title value={"Projects"}/>
                 <div className={s.projectsSet}>
                     <Project style={counterStyle} title='Counter' description='Does somethings...'/>
                     <Project style={counterStyle} title='Social network' description='Connects people...'/>
