@@ -15,6 +15,7 @@ export const Main = () => {
 
     return (
         <div className={s.main} style={backgroundStyle}>
+            <Header />
             <div className={sc.container}>
                 <div className={s.greetingField}>
                     <div className={s.greeting}>Hi There</div>

@@ -8,10 +8,11 @@
 /*}*/
 
 .main{
-    height: 93vh;
+    height: 100vh;
     background-size: cover;
     background-position: center;
     position: relative;
+
 }
 .main::before{
     position: absolute;
@@ -27,20 +28,21 @@
     min-width: 320px;
     z-index: 1;
     color: white;
+    margin-bottom: 24vh;
 }
 .greeting{
     font-family: Raleway-regular, sans-serif;
-    font-size: 24px;
+    font-size: 30px;
 }
 .name{
     font-family: Raleway-Black, sans-serif;
-    font-size: 50px;
+    font-size: 60px;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 .occupation{
     font-family: Raleway-regular, sans-serif;
-    font-size: 24px;
+    font-size: 30px;
 }
 .photo{
     width: 300px;
@@ -48,8 +50,9 @@
     background-size: cover;
     background-position: center;
     border-radius: 5px;
-    box-shadow: 0 0 3px white;
+    box-shadow: 0 0 5px white;
     z-index: 1;
+    margin-bottom: 24vh;
 }
 @media screen and (max-width: 414px){
     .greetingField{
