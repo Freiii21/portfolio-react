@@ -1,9 +1,9 @@
 import React from 'react';
-import s from './Main.module.css'
-import sc from './../common/styles/Container.module.css'
+import s from './Main.module.scss'
+import sc from './../common/styles/Container.module.scss'
 import myPhoto from './../assets/images/myPhoto.jpg'
 import background from './../assets/images/background.jpg'
-import {Header} from '../header/Header';
+import {Header} from './header/Header';
 
 export const Main = () => {
     const photoStyle = {

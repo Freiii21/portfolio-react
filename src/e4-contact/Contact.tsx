@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './Contact.module.css'
-import sc from './../common/styles/Container.module.css'
+import sc from './../common/styles/Container.module.scss'
 import {Title} from '../common/components/Title';
 
 export const Contact = () => {

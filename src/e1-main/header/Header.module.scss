@@ -1,0 +1,36 @@
+@import "./src/common/styles/sass/variables.scss";
+@import "./src/common/styles/sass/mixins.scss";
+
+.header {
+    height: 12vh;
+    width: 80%;
+    max-width: $maxDisplayWidth;
+    margin: 0 auto;
+    position: relative;
+    .headerContainer {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .name {
+            @include text(Montserrat-ExtraBold, sans-serif, 22px);
+            letter-spacing: 1px;
+            padding: 5px;
+            color: $textColor;
+        }
+    }
+}
+
+@media screen and (max-width: 777px){
+    .header {
+        .headerContainer {
+            justify-content: center;
+            .name {
+                color: transparent;
+                position: absolute;
+            }
+        }
+    }
+}
+
+

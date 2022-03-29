@@ -1,0 +1,17 @@
+@import "./src/common/styles/sass/variables.scss";
+@import "./src/common/styles/sass/mixins.scss";
+
+.nav {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    a {
+        text-decoration: none;
+        @include text(Raleway-regular, sans-serif, 13px);
+        color: $textColor;
+        text-transform: uppercase;
+    }
+    .icon{
+        color: $textColor;
+    }
+}

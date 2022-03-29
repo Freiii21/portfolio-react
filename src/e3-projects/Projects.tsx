@@ -1,5 +1,5 @@
 import s from './Projects.module.scss'
-import sc from './../common/styles/Container.module.css'
+import sc from './../common/styles/Container.module.scss'
 import {Project} from './project/Project';
 import {Title} from '../common/components/Title';
 import counter from '../assets/images/counter.jpg'

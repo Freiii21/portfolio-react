@@ -1,0 +1,4 @@
+@mixin text($fontFamily, $Serif, $fontSize){
+  font-family: $fontFamily, $Serif;
+  font-size: $fontSize;
+}
