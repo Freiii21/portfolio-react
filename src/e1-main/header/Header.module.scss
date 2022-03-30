@@ -26,8 +26,7 @@
         .headerContainer {
             justify-content: center;
             .name {
-                color: transparent;
-                position: absolute;
+               display: none;
             }
         }
     }
