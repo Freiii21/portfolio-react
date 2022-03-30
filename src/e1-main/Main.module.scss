@@ -20,7 +20,7 @@
         min-width: 320px;
         z-index: 1;
         color: $textColor;
-        margin-bottom: 24vh;
+        margin-bottom: 12vh;
         .greeting{
             @include text(Raleway-regular, sans-serif, 30px);
         }
@@ -41,7 +41,7 @@
         border-radius: 5px;
         box-shadow: 0 0 5px white;
         z-index: 1;
-        margin-bottom: 24vh;
+        margin-bottom: 12vh;
     }
 }
 
@@ -59,12 +59,14 @@
 @media screen and (max-width: 777px){
     .main {
         .greetingField {
+            margin-bottom: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
         .photo{
-            margin-top: -145px;
+            margin-bottom: 15px;
+            //margin-top: -145px;
         }
     }
 }
@@ -84,7 +86,7 @@
             }
         }
         .photo{
-            margin-top: -140px;
+            //margin-top: -140px;
         }
     }
 }

@@ -1,11 +1,9 @@
-@font-face {
-    font-family: Raleway-SemiBold;
-    src: url('./../../common/styles/fonts/Raleway-SemiBold.ttf')
-}
+@import "./src/common/styles/sass/variables.scss";
+@import "./src/common/styles/sass/mixins.scss";
+
 .title{
-    font-family: Raleway-SemiBold, sans-serif;
-    font-size: 23px;
-    color: #222;
+    @include text(Raleway-SemiBold, sans-serif, 23px);
+    color: $textSeconsdColor;
     margin-top: 30px;
     margin-bottom: 30px;
 }

@@ -16,13 +16,13 @@ export const Main = () => {
     return (
         <div className={s.main} style={backgroundStyle}>
             <Header />
-            <div className={sc.container}>
+            <div className={sc.container} style={{height: "88vh"}}>
                 <div className={s.greetingField}>
                     <div className={s.greeting}>Hi There</div>
                     <div className={s.name}>I'm Igor Titov.</div>
                     <div className={s.occupation}>Frontend Developer.</div>
                 </div>
-                <div className={s.photo} style={photoStyle}></div>
+                <div className={s.photo} style={photoStyle}/>
             </div>
         </div>
     );
