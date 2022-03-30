@@ -1,18 +1,17 @@
 @import "./src/common/styles/sass/variables.scss";
 
 .skills{
-    //min-height: 100vh;
     padding-bottom: 30px;
     background-color: $bgColor;
+    .skillsContainer{
+        flex-direction: column;
+        .skillsSet{
+            border: 1px solid;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+    }
 }
-.skillsContainer{
-    flex-direction: column;
-    //justify-content: flex-start;
-}
-.skillsSet{
-    border: 1px solid;
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
+

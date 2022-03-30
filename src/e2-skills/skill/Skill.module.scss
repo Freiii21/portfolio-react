@@ -1,0 +1,39 @@
+@import "./src/common/styles/sass/variables.scss";
+@import "./src/common/styles/sass/mixins.scss";
+
+.skill{
+    width: 350px;
+    height: 210px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 25px;
+    padding: 0 15px;
+    .iconField {
+        width: 80px;
+        height: 80px;
+        margin: 0 0 20px;
+        border: 1px solid lightgray;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .icon {
+            width: 45px;
+            height: 45px;
+        }
+    }
+    .title {
+        @include text(Raleway-Bold, sans-serif, 18px);
+        text-transform: uppercase;
+        color: $textSeconsdColor;
+        margin: 0 0 16px;
+    }
+    .description {
+        @include text(OpenSans-Regular, sans-serif, 16px);
+        color: $textThirdColor;
+    }
+}
+
