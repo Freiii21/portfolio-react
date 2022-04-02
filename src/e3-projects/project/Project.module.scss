@@ -60,3 +60,10 @@
     transition: all 0.5s ease;
   }
 }
+@media screen and (max-width: 629px){
+  .project {
+    width: 288px;
+    height: 170px;
+    margin: 0 0 10px;
+  }
+}
