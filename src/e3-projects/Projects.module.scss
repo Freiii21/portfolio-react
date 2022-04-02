@@ -1,5 +1,6 @@
 .projects{
-    min-height: 100vh;
+    //min-height: 100vh;
+    margin-bottom: 5px;
     .projectsContainer{
         flex-direction: column;
         justify-content: flex-start;
@@ -7,7 +8,7 @@
             border: 1px solid;
             width: 100%;
             display: flex;
-            justify-content: space-evenly;
+            justify-content: center;
             flex-wrap: wrap;
         }
     }

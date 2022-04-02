@@ -1,20 +1,27 @@
-import React, {CSSProperties} from 'react';
+import React from 'react';
 import s from './Project.module.scss'
+import {faArrowUpRightFromSquare} from '@fortawesome/free-solid-svg-icons';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 type ProjectPropsType = {
-    style: CSSProperties | undefined
+    bgImage: string
     title: string
-    description: string
+    link: string
 }
 
 export const Project = (props: ProjectPropsType) => {
+    const backgroundImage = {
+        backgroundImage: `url(${props.bgImage})`
+    };
+
     return (
-        <div className={s.project}>
-            <div className={s.icon} style={props.style}>
-                <a href="">Open project</a>
+        <div className={s.project} style={backgroundImage}>
+            <div className={s.content}>
+                <div>{props.title}</div>
+                <a href={props.link} target="_blank">
+                    <FontAwesomeIcon icon={faArrowUpRightFromSquare} className={s.icon}/>
+                </a>
             </div>
-            <h3 className={s.title}>{props.title}</h3>
-            <span className={s.description}>{props.description}</span>
         </div>
     );
 }

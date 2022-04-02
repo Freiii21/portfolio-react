@@ -12,11 +12,15 @@
 }
 @font-face {
     font-family: Raleway-SemiBold;
-    src: url('Raleway-SemiBold.ttf')
+    src: url('Raleway-SemiBold.ttf');
 }
 @font-face {
     font-family: Raleway-Bold;
     src: url('Raleway-Bold.ttf')
+}
+@font-face {
+    font-family: Raleway-ExtraBold;
+    src: url('Raleway-ExtraBold.ttf')
 }
 @font-face {
     font-family: OpenSans-Regular;
