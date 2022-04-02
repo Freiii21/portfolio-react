@@ -1,15 +1,30 @@
 {
   "files": {
-    "main.css": "/portfolio-react/static/css/main.20c9f207.css",
-    "main.js": "/portfolio-react/static/js/main.d722762b.js",
+    "main.css": "/portfolio-react/static/css/main.876c818f.css",
+    "main.js": "/portfolio-react/static/js/main.f7dcbccb.js",
     "static/js/787.aeca62f9.chunk.js": "/portfolio-react/static/js/787.aeca62f9.chunk.js",
+    "static/media/Montserrat-ExtraBold.ttf": "/portfolio-react/static/media/Montserrat-ExtraBold.5daafc620ecc802516f9.ttf",
+    "static/media/Raleway-Regular.ttf": "/portfolio-react/static/media/Raleway-Regular.9ade142e81dd8d55cd32.ttf",
+    "static/media/Raleway-SemiBold.ttf": "/portfolio-react/static/media/Raleway-SemiBold.243af299ad3631bfc369.ttf",
+    "static/media/Raleway-ExtraBold.ttf": "/portfolio-react/static/media/Raleway-ExtraBold.ac7bcb8a0f4abc1d6591.ttf",
+    "static/media/Raleway-Bold.ttf": "/portfolio-react/static/media/Raleway-Bold.d1a96e2aa6257c864d4d.ttf",
+    "static/media/Raleway-Black.ttf": "/portfolio-react/static/media/Raleway-Black.eef1ff812c4eced3a276.ttf",
+    "static/media/background.jpg": "/portfolio-react/static/media/background.3345e8f43e9b46aee9c2.jpg",
+    "static/media/cards.jpg": "/portfolio-react/static/media/cards.46961c65c35fbc10144e.jpg",
+    "static/media/OpenSans-Regular.ttf": "/portfolio-react/static/media/OpenSans-Regular.d7d7b8359eeb9cddfba6.ttf",
+    "static/media/myPhoto.jpg": "/portfolio-react/static/media/myPhoto.10a189ad93de10ee4bb0.jpg",
+    "static/media/counter.jpg": "/portfolio-react/static/media/counter.01e0d3bfaa2de953ac4e.jpg",
+    "static/media/socialNetwork.jpg": "/portfolio-react/static/media/socialNetwork.633f3399508f1df8c152.jpg",
+    "static/media/todolist.jpg": "/portfolio-react/static/media/todolist.19a16b5a07b7ce85f33e.jpg",
+    "static/media/js.svg": "/portfolio-react/static/media/js.aea239beb2f21e14ecb5b9447dab17d2.svg",
+    "static/media/ts.svg": "/portfolio-react/static/media/ts.32da652b7325a8189f4f9c12ffd06650.svg",
     "index.html": "/portfolio-react/index.html",
-    "main.20c9f207.css.map": "/portfolio-react/static/css/main.20c9f207.css.map",
-    "main.d722762b.js.map": "/portfolio-react/static/js/main.d722762b.js.map",
+    "main.876c818f.css.map": "/portfolio-react/static/css/main.876c818f.css.map",
+    "main.f7dcbccb.js.map": "/portfolio-react/static/js/main.f7dcbccb.js.map",
     "787.aeca62f9.chunk.js.map": "/portfolio-react/static/js/787.aeca62f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.20c9f207.css",
-    "static/js/main.d722762b.js"
+    "static/css/main.876c818f.css",
+    "static/js/main.f7dcbccb.js"
   ]
 }
