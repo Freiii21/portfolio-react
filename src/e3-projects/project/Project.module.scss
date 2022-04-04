@@ -21,16 +21,17 @@
     text-transform: uppercase;
     color: $textSeconsdColor;
     opacity: 0;
-    transition: all 0.5s ease;
+    transition: all 0.5s steps(20);
     .icon{
       width: 20px;
       height: 20px;
       color: $textSeconsdColor;
-      margin-top: 40px;
+      margin-top: 60px;
       padding: 10px;
       border-radius: 5px;
       background-color: white;
       box-shadow: 0 0 7px $textSeconsdColor;
+      transition: all 0.3s steps(20);
     }
   }
   &::before {
@@ -42,7 +43,7 @@
     left: 25px;
     right: 25px;
     opacity: 0;
-    transition: all 0.5s ease;
+    transition: all 0.5s ease-in-out;
   }
   &:hover::before {
     position: absolute;
@@ -53,11 +54,15 @@
     left: 10px;
     right: 10px;
     opacity: 0.9;
-    transition: all 0.5s ease;
+    transition: all 0.5s ease-in-out;
   }
   &:hover .content{
     opacity: 1;
-    transition: all 0.5s ease;
+    transition: all 0.5s steps(20);
+    .icon{
+      margin-top: 40px;
+      transition: all 0.3s steps(20);
+    }
   }
 }
 @media screen and (max-width: 629px){

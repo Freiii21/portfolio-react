@@ -19,7 +19,7 @@ export const Projects = () => {
         {bgImage: cards, title:'Cards', link:'https://freiii21.github.io/react-counter/'},
         {bgImage: todolist, title:'Todolist', link:'https://freiii21.github.io/react-counter/'},
         {bgImage: counter, title:'Counter', link:'https://freiii21.github.io/react-counter/'},
-        {bgImage: socialNetwork, title:'Social network', link:'https://freiii21.github.io/react-counter/'},
+        {bgImage: socialNetwork, title:'Social network', link:'https://freiii21.github.io/react-social-network/'},
     ];
     const myProjectsMap = myProjects.map(project => <Project bgImage={project.bgImage}
                                                              title={project.title}
