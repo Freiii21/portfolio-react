@@ -24,7 +24,7 @@ export const Projects = () => {
     const myProjectsMap = myProjects.map(project => <Project bgImage={project.bgImage}
                                                              title={project.title}
                                                              link={project.link}
-    />);
+                                                             key={project.title} />);
 
     return (
         <div className={s.projects}>

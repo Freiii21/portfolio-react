@@ -29,7 +29,10 @@ export const Skills = () => {
         {icon: faSass, title:'SASS', description:'Some description with a loooooong string...'},
     ];
 
-    const mySkillsMap = mySkills.map(skill => <Skill icon={skill.icon} title={skill.title} description={skill.description}/>);
+    const mySkillsMap = mySkills.map(skill => <Skill icon={skill.icon}
+                                                     title={skill.title}
+                                                     description={skill.description}
+                                                     key={skill.title} />);
 
     return (
         <div className={s.skills}>
