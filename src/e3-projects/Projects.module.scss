@@ -1,6 +1,7 @@
+@import "./src/common/styles/sass/variables.scss";
+
 .projects{
-    //min-height: 100vh;
-    margin-bottom: 5px;
+    background-color: $bgColor;
     .projectsContainer{
         flex-direction: column;
         justify-content: flex-start;

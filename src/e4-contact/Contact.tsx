@@ -15,7 +15,7 @@ export const Contact = () => {
                     </div>
                     <textarea placeholder="Your message"/>
                 </form>
-                <button>Send message</button>
+                <button onClick={()=>alert("send message")}>Send message</button>
             </div>
         </div>
     );

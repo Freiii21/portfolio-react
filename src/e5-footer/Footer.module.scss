@@ -1,0 +1,36 @@
+@import "./src/common/styles/sass/variables.scss";
+@import "./src/common/styles/sass/mixins.scss";
+
+.footer {
+    height: 31vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $bgSecondColor;
+    .name{
+        @include text(Raleway-Bold, sans-serif, 18px);
+        color: $textColor;
+        background-color: $bgSecondColor;
+        margin: 40px 0;
+    }
+    .footerContainer {
+        width: 320px;
+        display: flex;
+        justify-content: center;
+        .icon {
+            color: $textColor;
+            width:45px;
+            height:45px;
+            padding: 0 20px;
+        }
+    }
+    .copyrights{
+        width: 700px;
+        text-align: center;
+        padding: 30px 0;
+        margin-top: 30px;
+        border-top: 1px solid #343434;
+        @include text(OpenSans-Regular, sans-serif, 14px);
+        color: $textFifthColor;
+    }
+}

@@ -3,7 +3,6 @@
 
 .contact{
     height: 69vh;
-    background-color: $bgColor;
     .contactContainer{
         flex-direction: column;
         justify-content: flex-start;
@@ -49,7 +48,7 @@
             padding: 10px 20px;
             text-transform: uppercase;
             @include text(Raleway-SemiBold, sans-serif, 13px);
-            color: $textFourthColor;
+            color: $textColor;
         }
         button:hover {
             background-color: transparent;
