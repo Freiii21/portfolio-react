@@ -1,11 +1,17 @@
-import React from 'react';
+import React, {MutableRefObject} from 'react';
 import s from './Main.module.scss'
 import sc from './../common/styles/Container.module.scss'
 import myPhoto from './../assets/images/myPhoto.jpg'
 import background from './../assets/images/background.jpg'
 import {Header} from './header/Header';
+import {scrollFunctionsType} from '../App';
 
-export const Main = () => {
+type MainPropsType = {
+    mainRef: MutableRefObject<null | HTMLDivElement>
+    scrollFunctions: scrollFunctionsType
+}
+
+export const Main = (props:MainPropsType) => {
     const photoStyle = {
         backgroundImage: `url(${myPhoto})`
     };
@@ -14,8 +20,8 @@ export const Main = () => {
     };
 
     return (
-        <div className={s.main} style={backgroundStyle}>
-            <Header />
+        <div className={s.main} style={backgroundStyle} ref={props.mainRef}>
+            <Header scrollFunctions={props.scrollFunctions}/>
             <div className={sc.container} style={{height: "88vh"}}>
                 <div className={s.greetingField}>
                     <div className={s.greeting}>Hi There</div>

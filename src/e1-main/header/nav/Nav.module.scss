@@ -5,8 +5,7 @@
     width: 300px;
     display: flex;
     justify-content: space-between;
-    a {
-        text-decoration: none;
+    div {
         @include text(Raleway-regular, sans-serif, 13px);
         color: $textColor;
         text-transform: uppercase;

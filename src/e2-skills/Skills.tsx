@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {MutableRefObject} from 'react';
 import s from './Skills.module.scss'
 import sc from './../common/styles/Container.module.scss'
 import {Skill} from './skill/Skill';
@@ -12,13 +12,17 @@ import jsIcon from './../assets/icons/js.svg'
 import apiIcon from './../assets/icons/api.png'
 import cssIcon from './../assets/icons/css.png'
 
+type SkillPropsType = {
+    skillsRef: MutableRefObject<null | HTMLDivElement>
+}
+
 type skillType = {
     icon: IconDefinition | string
     title: string
     description: string
 }
 
-export const Skills = () => {
+export const Skills = (props: SkillPropsType) => {
     const mySkills: Array<skillType> = [
         {icon: jsIcon, title:'JavaScript', description:'Some description...'},
         {icon: faReact, title:'React', description:'Some description...'},
@@ -35,7 +39,7 @@ export const Skills = () => {
                                                      key={skill.title} />);
 
     return (
-        <div className={s.skills}>
+        <div className={s.skills} ref={props.skillsRef}>
             <div className={`${sc.container} ${s.skillsContainer}`}>
                 <Title value={"Skills"}/>
                 <div className={s.skillsSet}>
