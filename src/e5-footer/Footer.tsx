@@ -16,7 +16,10 @@ export const Footer = () => {
                 <FontAwesomeIcon icon={faVk} className={s.icon}/>
                 <FontAwesomeIcon icon={faGithub} className={s.icon}/>
             </div>
-            <div className={s.copyrights}>Igor © 2022. All Rights Reserved.</div>
+            <div className={s.copyrights}>
+                <div>Igor © 2022. All Rights Reserved. </div>
+                <div>Made with React.</div>
+            </div>
         </div>
     );
 }
