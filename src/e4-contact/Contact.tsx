@@ -9,17 +9,20 @@ type ContactPropsType = {
 
 export const Contact = (props: ContactPropsType) => {
     return (
-        <div className={s.contact} ref={props.contactRef}>
-            <div className={`${sc.container} ${s.contactContainer}`}>
-                <Title value={"Contact"}/>
-                <form className={s.formContainer}>
-                    <div className={s.inputFields}>
-                        <input placeholder="Name"/>
-                        <input placeholder="Email"/>
-                    </div>
-                    <textarea placeholder="Your message"/>
-                </form>
-                <button onClick={()=>alert("send message")}>Send message</button>
+        <div>
+            <div style={{marginTop: '-55px', height: '55px'}} ref={props.contactRef}/>
+            <div className={s.contact}>
+                <div className={`${sc.container} ${s.contactContainer}`}>
+                    <Title value={'Contact'}/>
+                    <form className={s.formContainer}>
+                        <div className={s.inputFields}>
+                            <input placeholder="Name"/>
+                            <input placeholder="Email"/>
+                        </div>
+                        <textarea placeholder="Your message"/>
+                    </form>
+                    <button onClick={() => alert('send message')}>Send message</button>
+                </div>
             </div>
         </div>
     );

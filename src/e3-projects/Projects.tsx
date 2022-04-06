@@ -20,22 +20,25 @@ type projectType = {
 
 export const Projects = (props: ProjectsPropsType) => {
     const myProjects: Array<projectType> = [
-        {bgImage: cards, title:'Cards', link:'https://freiii21.github.io/react-counter/'},
-        {bgImage: todolist, title:'Todolist', link:'https://freiii21.github.io/react-counter/'},
-        {bgImage: counter, title:'Counter', link:'https://freiii21.github.io/react-counter/'},
-        {bgImage: socialNetwork, title:'Social network', link:'https://freiii21.github.io/react-social-network/'},
+        {bgImage: cards, title: 'Cards', link: 'https://freiii21.github.io/react-counter/'},
+        {bgImage: todolist, title: 'Todolist', link: 'https://freiii21.github.io/react-counter/'},
+        {bgImage: counter, title: 'Counter', link: 'https://freiii21.github.io/react-counter/'},
+        {bgImage: socialNetwork, title: 'Social network', link: 'https://freiii21.github.io/react-social-network/'},
     ];
     const myProjectsMap = myProjects.map(project => <Project bgImage={project.bgImage}
                                                              title={project.title}
                                                              link={project.link}
-                                                             key={project.title} />);
+                                                             key={project.title}/>);
 
     return (
-        <div className={s.projects} ref={props.projectsRef}>
-            <div className={`${sc.container} ${s.projectsContainer}`}>
-                <Title value={"Projects"}/>
-                <div className={s.projectsSet}>
-                    {myProjectsMap}
+        <div>
+            <div style={{marginTop: '-55px', height: '55px'}} ref={props.projectsRef}/>
+            <div className={s.projects} >
+                <div className={`${sc.container} ${s.projectsContainer}`}>
+                    <Title value={'Projects'}/>
+                    <div className={s.projectsSet}>
+                        {myProjectsMap}
+                    </div>
                 </div>
             </div>
         </div>

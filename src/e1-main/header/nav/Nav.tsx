@@ -6,11 +6,14 @@ import {scrollFunctionsType} from '../../../App';
 
 type NavPropsType = {
     scrollFunctions: scrollFunctionsType
+    headerHidden: boolean
 }
 
 export const Nav = (props: NavPropsType) => {
+    const navClass = !props.headerHidden ? s.nav : `${s.nav} ${s.scrolled}`;
+
     return (
-        <div className={s.nav}>
+        <div className={navClass}>
             <div onClick={props.scrollFunctions.main}>Home</div>
             <div onClick={props.scrollFunctions.skills}>Skills</div>
             <div onClick={props.scrollFunctions.projects}>Projects</div>
