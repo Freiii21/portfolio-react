@@ -3,6 +3,7 @@ import s from './Footer.module.scss'
 import { faVk } from '@fortawesome/free-brands-svg-icons'
 import { faTelegram } from '@fortawesome/free-brands-svg-icons'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 export const Footer = () => {
@@ -13,6 +14,7 @@ export const Footer = () => {
                 <FontAwesomeIcon icon={faLinkedin} className={s.icon}/>
                 <FontAwesomeIcon icon={faTelegram} className={s.icon}/>
                 <FontAwesomeIcon icon={faVk} className={s.icon}/>
+                <FontAwesomeIcon icon={faGithub} className={s.icon}/>
             </div>
             <div className={s.copyrights}>Igor © 2022. All Rights Reserved.</div>
         </div>

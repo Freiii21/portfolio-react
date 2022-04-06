@@ -1,58 +1,101 @@
 @import "./src/common/styles/sass/variables.scss";
 @import "./src/common/styles/sass/mixins.scss";
 
-.contact{
-    height: 69vh;
-    .contactContainer{
-        flex-direction: column;
-        justify-content: flex-start;
-        .formContainer{
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 60px;
-            .inputFields{
-                display: flex;
-                & input{
-                    width: 376px;
-                    height: 42px;
-                    border: none;
-                    border-bottom: 2px solid $textSeconsdColor;
-                    padding: 6px 12px;
-                    margin: 0 15px 24px;
-                    background-color: transparent;
-                    outline: none;
-                    @include text(OpenSans-Regular, sans-serif, 14px);
-                }
-            }
-            & textarea{
-                width: 782px;
-                min-height: 140px;
-                padding: 6px 12px;
-                margin: 0 15px 24px;
-                border: none;
-                border-bottom: 2px solid $textSeconsdColor;
-                background-color: transparent;
-                resize: none;
-                outline: none;
-                @include text(OpenSans-Regular, sans-serif, 14px);
-            }
+.contact {
+  min-height: 69vh;
+  .contactContainer {
+    flex-direction: column;
+    justify-content: flex-start;
+    .formContainer {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 60px;
+      .inputFields {
+        display: flex;
+        & input {
+          width: 376px;
+          height: 42px;
+          border: none;
+          border-bottom: 2px solid $textSeconsdColor;
+          padding: 6px 12px;
+          margin: 0 15px 24px;
+          background-color: transparent;
+          outline: none;
+          @include text(OpenSans-Regular, sans-serif, 14px);
         }
-        button {
-            margin: 80px 0 0;
-            width: 143px;
-            height: 45px;
-            border: 2px solid $bgSecondColor;
-            background-color: $bgSecondColor;
-            padding: 10px 20px;
-            text-transform: uppercase;
-            @include text(Raleway-SemiBold, sans-serif, 13px);
-            color: $textColor;
-        }
-        button:hover {
-            background-color: transparent;
-            color: $textSeconsdColor;
-        }
+      }
+      & textarea {
+        width: 782px;
+        min-height: 140px;
+        padding: 6px 12px;
+        margin: 0 15px 24px;
+        border: none;
+        border-bottom: 2px solid $textSeconsdColor;
+        background-color: transparent;
+        resize: none;
+        outline: none;
+        @include text(OpenSans-Regular, sans-serif, 14px);
+      }
     }
+    button {
+      margin: 80px 0 0;
+      width: 143px;
+      height: 45px;
+      border: 2px solid $bgSecondColor;
+      background-color: $bgSecondColor;
+      padding: 10px 20px;
+      text-transform: uppercase;
+      @include text(Raleway-SemiBold, sans-serif, 13px);
+      color: $textColor;
+    }
+    button:hover {
+      background-color: transparent;
+      color: $textSeconsdColor;
+    }
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .contact {
+    .contactContainer {
+      .formContainer {
+        .inputFields {
+          & input {
+            width: 320px;
+          }
+        }
+        & textarea {
+          width: 670px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 845px) {
+  .contact {
+    .contactContainer {
+      .formContainer {
+        margin-top: 20px;
+        .inputFields {
+          flex-direction: column;
+          & input {
+            width: 280px;
+            padding: 6px 0;
+            margin: 0 15px 0;
+          }
+        }
+        & textarea {
+          width: 280px;
+          padding: 6px 0;
+          margin: 0 15px 30px;
+        }
+      }
+      button {
+        margin-top: 15px;
+        margin-bottom: 40px;
+      }
+    }
+  }
 }
