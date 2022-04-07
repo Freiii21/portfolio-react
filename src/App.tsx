@@ -20,16 +20,33 @@ export type underlineMenuType = {
 }
 
 function App() {
+    const [collapsedMobileMenu, setCollapsedMobileMenu] = useState(true);
+    const expandMobileMenu = () => {
+        setCollapsedMobileMenu(!collapsedMobileMenu);
+    }
+
     const mainRef = useRef<null | HTMLDivElement>(null);
     const skillsRef = useRef<null | HTMLDivElement>(null);
     const projectsRef = useRef<null | HTMLDivElement>(null);
     const contactRef = useRef<null | HTMLDivElement>(null);
     const nameRef = useRef<null | HTMLDivElement>(null);
 
-    const mainRefScroll = () => mainRef.current && mainRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    const skillsRefScroll = () => skillsRef.current && skillsRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    const projectsRefScroll = () => projectsRef.current && projectsRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    const contactRefScroll = () => contactRef.current && contactRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const mainRefScroll = () => {
+        setCollapsedMobileMenu(true);
+        mainRef.current && mainRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    const skillsRefScroll = () => {
+        setCollapsedMobileMenu(true);
+        skillsRef.current && skillsRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    const projectsRefScroll = () => {
+        setCollapsedMobileMenu(true);
+        projectsRef.current && projectsRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    const contactRefScroll = () => {
+        setCollapsedMobileMenu(true);
+        contactRef.current && contactRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
 
     const scrollFunctions:scrollFunctionsType = {
         main: mainRefScroll,
@@ -65,14 +82,14 @@ function App() {
         }
         if(skillsRef.current && projectsRef.current && window.scrollY >= skillsRef.current.offsetTop
             && window.scrollY < projectsRef.current.offsetTop){
-            temp = {...temp, home: false, skills: true}
+            temp = {...temp, home: false, skills: true, project: false, contact: false}
         }
         if(projectsRef.current && contactRef.current && window.scrollY >= projectsRef.current.offsetTop
             && window.scrollY < contactRef.current.offsetTop){
-            temp = {...temp, home: false, skills: false, project: true}
+            temp = {...temp, home: false, skills: false, project: true, contact: false}
         }
         if(contactRef.current && window.scrollY >= contactRef.current.offsetTop){
-            temp = {...temp, home: false, project: false, contact: true}
+            temp = {...temp, home: false, skills: false, project: false, contact: true}
         }
         setUnderlineMenu(temp);
     }
@@ -83,6 +100,8 @@ function App() {
                   nameRef={nameRef}
                   headerHidden={headerHidden}
                   underlineMenu={underlineMenu}
+                  collapsedMobileMenu={collapsedMobileMenu}
+                  expandMobileMenu={expandMobileMenu}
                   scrollFunctions={scrollFunctions} />
             <Skills skillsRef={skillsRef}/>
             <Projects projectsRef={projectsRef}/>

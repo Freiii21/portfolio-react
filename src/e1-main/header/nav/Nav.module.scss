@@ -2,28 +2,57 @@
 @import "./src/common/styles/sass/mixins.scss";
 
 .nav {
-    width: 300px;
-    display: flex;
-    justify-content: space-between;
-    div {
-        @include text(Raleway-regular, sans-serif, 13px);
-        color: $textColor;
-        text-transform: uppercase;
-    }
-    .icon{
-        color: $textColor;
-    }
-    .onScreen {
-        text-decoration: underline;
-        text-underline-offset: 3px;
-        text-decoration-thickness: 2px;
-    }
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  div {
+    @include text(Raleway-regular, sans-serif, 13px);
+    color: $textColor;
+    text-transform: uppercase;
+  }
+  .icon {
+    color: $textColor;
+  }
+  .onScreen {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 2px;
+  }
 }
-.scrolled{
-    div {
-        color: $textSeconsdColor;
-    }
-    .icon{
-        color: $textSeconsdColor;
-    }
+
+.barsMenu {
+  display: none;
+  color: $textColor;
+  height: 22px;
+}
+
+.scrolled {
+  color: $textSeconsdColor;
+}
+
+@media screen and (max-width: 777px) {
+  .nav {
+    left: 10%;
+    top: 8vh;
+    width: 80%;
+    height: 0;
+    padding: 20px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    z-index: 998;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+  }
+  .barsMenu {
+    display: block;
+  }
+}
+
+.mobileClass {
+  height: 30%;
+  opacity: 0.9;
+  transition: all 0.3s ease-in-out;
 }

@@ -6,6 +6,8 @@ import {scrollFunctionsType, underlineMenuType} from '../../App';
 type HeaderPropsType = {
     scrollFunctions: scrollFunctionsType
     underlineMenu: underlineMenuType
+    collapsedMobileMenu: boolean
+    expandMobileMenu: () => void
     headerHidden: boolean
 }
 
@@ -19,6 +21,8 @@ export const Header = (props: HeaderPropsType) => {
                     <div className={s.name} onClick={props.scrollFunctions.main}>IGOR</div>
                     <Nav scrollFunctions={props.scrollFunctions}
                          underlineMenu={props.underlineMenu}
+                         collapsedMobileMenu={props.collapsedMobileMenu}
+                         expandMobileMenu={props.expandMobileMenu}
                          headerHidden={props.headerHidden}/>
                 </div>
             </div>

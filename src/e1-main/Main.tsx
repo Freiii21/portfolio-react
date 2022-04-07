@@ -11,28 +11,14 @@ type MainPropsType = {
     nameRef: MutableRefObject<null | HTMLDivElement>
     headerHidden: boolean
     underlineMenu: underlineMenuType
+    collapsedMobileMenu: boolean
+    expandMobileMenu: () => void
     scrollFunctions: scrollFunctionsType
 }
 
 export const Main = (props: MainPropsType) => {
     const photoStyle = {backgroundImage: `url(${myPhoto})`};
     const backgroundStyle = {backgroundImage: `url(${background})`};
-
-    // const nameRef = useRef<null | HTMLDivElement>(null);
-    // const [headerHidden, setHeaderHidden] = useState(false);
-    //
-    // useEffect(() => {
-    //     window.addEventListener('scroll', scrollHandler);
-    //     return () => window.removeEventListener('scroll', scrollHandler);
-    // }, []);
-    //
-    // const scrollHandler = () => {
-    //     if(nameRef.current && window.scrollY >= nameRef.current.offsetTop){
-    //         setHeaderHidden(true);
-    //     } else {
-    //         setHeaderHidden(false);
-    //     }
-    // }
 
     const greetingFieldClass = !props.headerHidden ? s.greetingField : `${s.greetingField} ${s.greetingFieldScrolled}`;
     const photoClass = !props.headerHidden ? s.photo : `${s.photo} ${s.photoScrolled}`;
@@ -42,6 +28,8 @@ export const Main = (props: MainPropsType) => {
         <div className={s.main} style={backgroundStyle} ref={props.mainRef}>
             <Header scrollFunctions={props.scrollFunctions}
                     underlineMenu={props.underlineMenu}
+                    collapsedMobileMenu={props.collapsedMobileMenu}
+                    expandMobileMenu={props.expandMobileMenu}
                     headerHidden={props.headerHidden}/>
             <div className={sc.container} style={{height: `${mainFieldHeightStyle}`}}>
                 <div className={greetingFieldClass}>
