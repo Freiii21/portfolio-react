@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import './App.css';
 import {Main} from './e1-main/Main';
 import {Skills} from './e2-skills/Skills';
@@ -12,12 +12,19 @@ export type scrollFunctionsType = {
     projects: () => void
     contact: () => void
 }
+export type underlineMenuType = {
+    home: boolean
+    skills: boolean
+    project: boolean
+    contact: boolean
+}
 
 function App() {
     const mainRef = useRef<null | HTMLDivElement>(null);
     const skillsRef = useRef<null | HTMLDivElement>(null);
     const projectsRef = useRef<null | HTMLDivElement>(null);
     const contactRef = useRef<null | HTMLDivElement>(null);
+    const nameRef = useRef<null | HTMLDivElement>(null);
 
     const mainRefScroll = () => mainRef.current && mainRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
     const skillsRefScroll = () => skillsRef.current && skillsRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -31,9 +38,52 @@ function App() {
         contact: contactRefScroll,
     }
 
+    const [headerHidden, setHeaderHidden] = useState(false);
+    const [underlineMenu, setUnderlineMenu] = useState<underlineMenuType>({
+        home: true,
+        skills: false,
+        project: false,
+        contact: false,
+    })
+
+    useEffect(() => {
+        window.addEventListener('scroll', scrollHandler);
+        return () => window.removeEventListener('scroll', scrollHandler);
+    }, []);
+
+    const scrollHandler = () => {
+        if(nameRef.current && window.scrollY >= nameRef.current.offsetTop){
+            setHeaderHidden(true);
+        } else {
+            setHeaderHidden(false);
+        }
+
+        let temp = underlineMenu;
+        if(mainRef.current && skillsRef.current && window.scrollY >= mainRef.current.offsetTop
+            && window.scrollY < skillsRef.current.offsetTop){
+            temp = {home: true, skills: false, project: false, contact: false}
+        }
+        if(skillsRef.current && projectsRef.current && window.scrollY >= skillsRef.current.offsetTop
+            && window.scrollY < projectsRef.current.offsetTop){
+            temp = {...temp, home: false, skills: true}
+        }
+        if(projectsRef.current && contactRef.current && window.scrollY >= projectsRef.current.offsetTop
+            && window.scrollY < contactRef.current.offsetTop){
+            temp = {...temp, home: false, skills: false, project: true}
+        }
+        if(contactRef.current && window.scrollY >= contactRef.current.offsetTop){
+            temp = {...temp, home: false, project: false, contact: true}
+        }
+        setUnderlineMenu(temp);
+    }
+
     return (
         <div className="App">
-            <Main mainRef={mainRef} scrollFunctions={scrollFunctions} />
+            <Main mainRef={mainRef}
+                  nameRef={nameRef}
+                  headerHidden={headerHidden}
+                  underlineMenu={underlineMenu}
+                  scrollFunctions={scrollFunctions} />
             <Skills skillsRef={skillsRef}/>
             <Projects projectsRef={projectsRef}/>
             <Contact contactRef={contactRef}/>
