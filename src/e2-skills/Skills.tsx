@@ -11,6 +11,7 @@ import tsIcon from './../assets/icons/ts.svg'
 import jsIcon from './../assets/icons/js.svg'
 import apiIcon from './../assets/icons/api.png'
 import cssIcon from './../assets/icons/css.png'
+import html_css from './../assets/icons/html_css.png'
 
 type SkillPropsType = {
     skillsRef: MutableRefObject<null | HTMLDivElement>
@@ -29,8 +30,9 @@ export const Skills = (props: SkillPropsType) => {
         {icon: tsIcon, title: 'TypeScript', description: 'Some description...'},
         {icon: reduxIcon, title: 'Redux', description: 'Some description...'},
         {icon: apiIcon, title: 'REST API', description: 'Some description...'},
+        {icon: html_css, title:'HTML + CSS', description:'Some description with a loooooong string...'},
         // {icon: cssIcon, title:'CSS', description:'Some description with a loooooong string...'},
-        {icon: faSass, title: 'SASS', description: 'Some description with a loooooong string...'},
+        // {icon: faSass, title: 'SASS', description: 'Some description with a loooooong string...'},
     ];
 
     const mySkillsMap = mySkills.map(skill => <Skill icon={skill.icon}

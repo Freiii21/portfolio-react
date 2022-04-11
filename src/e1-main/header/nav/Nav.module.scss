@@ -25,11 +25,20 @@
   color: $textColor;
   height: 22px;
 }
-
 .scrolled {
   color: $textSeconsdColor;
+  background-color: white;
+  opacity: 1;
+  left: 0;
+  width: 100%;
+  padding-left: 10%;
+  div {
+    color: $textSeconsdColor;
+  }
+  .icon {
+    color: $textSeconsdColor;
+  }
 }
-
 @media screen and (max-width: 777px) {
   .nav {
     left: 10%;
@@ -50,9 +59,12 @@
     display: block;
   }
 }
-
 .mobileClass {
   height: 30%;
   opacity: 0.9;
   transition: all 0.3s ease-in-out;
+  justify-content: flex-start;
+    div {
+      margin-bottom: 32px;
+    }
 }
