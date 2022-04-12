@@ -2,37 +2,66 @@
 @import "./src/common/styles/sass/mixins.scss";
 
 .skill{
-    width: 350px;
-    height: 210px;
-    border: 1px solid black;
+    width: 300px;
+    height: 170px;
+    //border: 1px solid lightgray;
+    //border-radius: 5px;
+    //box-shadow: 2px 2px 5px -3px black;
+    border-radius: 10px;
+    margin: 0 15px 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
     text-align: center;
     padding: 0 15px;
+    transition: all 0.3s ease-in-out;
+    background-color: #f2f2f2;
     .iconField {
-        width: 85px;
-        height: 85px;
-        margin: 0 0 20px;
-        border: 1px solid lightgray;
+        width: 90px;
+        height: 90px;
+        //margin: 0 0 15px;
+        //background-color: #f2f2f2;
+        //border: 1px solid lightgray;
         border-radius: 100%;
+        background-color: white;
         display: flex;
         justify-content: center;
         align-items: center;
         .icon {
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
         }
     }
     .title {
         @include text(Raleway-Bold, sans-serif, 18px);
         text-transform: uppercase;
         color: $textSeconsdColor;
-        margin: 0 0 16px;
+        transition: all 0.3s ease-in-out;
+        //margin: 0 0 16px;
     }
     .description {
         @include text(OpenSans-Regular, sans-serif, 16px);
         color: $textThirdColor;
+    }
+}
+.skill:hover {
+    //width: 330px;
+    //height: 185px;
+    //margin: 0 0 15px;
+    background-color: darkgrey;
+    //box-shadow: 6px 6px 5px -3px black;
+    transition: all 0.3s ease-in-out;
+    .iconField {
+        //border: 1px solid lightgray;
+        //border-radius: 100%;
+        //box-shadow: 0px 0px 5px 1px black;
+        background-color: white;
+    }
+    .title {
+        //text-decoration: underline;
+        color: white;
+        transition: all 0.3s ease-in-out;
     }
 }
 

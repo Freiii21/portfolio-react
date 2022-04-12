@@ -36,7 +36,7 @@ export const Nav = (props: NavPropsType) => {
                 <div onClick={props.scrollFunctions.skills} className={underlineSkillsMenu}>Skills</div>
                 <div onClick={props.scrollFunctions.projects} className={underlineProjectsMenu}>Projects</div>
                 <div onClick={props.scrollFunctions.contact} className={underlineContactMenu}>Contact</div>
-                <FontAwesomeIcon icon={faEarth} className={s.icon} onClick={() => alert('aaa')}/>
+                {/*<FontAwesomeIcon icon={faEarth} className={s.icon} onClick={() => alert('aaa')}/>*/}
             </div>
             <FontAwesomeIcon icon={faBars}
                              onClick={() => props.expandMobileMenu()}

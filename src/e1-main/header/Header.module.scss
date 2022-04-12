@@ -42,7 +42,9 @@
         }
     }
 }
-
+.mobileMenu{
+    box-shadow: none;
+}
 
 @media screen and (max-width: 777px){
     .header {

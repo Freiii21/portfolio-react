@@ -12,7 +12,8 @@ type HeaderPropsType = {
 }
 
 export const Header = (props: HeaderPropsType) => {
-    const headerClass = !props.headerHidden ? s.header : `${s.header} ${s.scrolled}`;
+    const basicHeaderClass = !props.headerHidden ? s.header : `${s.header} ${s.scrolled}`;
+    const headerClass = props.collapsedMobileMenu ? basicHeaderClass : `${basicHeaderClass} ${s.mobileMenu}`;
 
     return (
         <div className={headerClass}>

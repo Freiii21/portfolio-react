@@ -8,8 +8,11 @@ import {faSass} from '@fortawesome/free-brands-svg-icons'
 import {IconDefinition} from '@fortawesome/free-solid-svg-icons';
 import reduxIcon from './../assets/icons/redux.png'
 import tsIcon from './../assets/icons/ts.svg'
+// import tsIcon from './../assets/icons/tsColor.png'
 import jsIcon from './../assets/icons/js.svg'
+// import jsIcon from './../assets/icons/jsColor.png'
 import apiIcon from './../assets/icons/api.png'
+// import react from './../assets/icons/reactColor.png'
 import cssIcon from './../assets/icons/css.png'
 import html_css from './../assets/icons/html_css.png'
 
