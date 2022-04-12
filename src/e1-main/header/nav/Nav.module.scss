@@ -25,13 +25,36 @@
   color: $textColor;
   height: 22px;
 }
-.scrolled {
-  color: $textSeconsdColor;
+.hiddenPrimaryBackground {
+  position: fixed;
+  height: 0;
+  width: 80%;
+  left: 10%;
+  top: 8vh;
+  background-color: black;
+  z-index: 98;
+  opacity: 0;
+  transition: all 0.2s ease-in-out
+}
+.primaryBackground {
+  height: 30%;
+  opacity: 0.9;
+  transition: all 0.2s ease-in-out
+}
+.secondBackground {
   background-color: white;
   opacity: 1;
+  margin-left: -10px;
+  width: 120%;
   left: 0;
-  width: 100%;
-  padding-left: 10%;
+  box-shadow: 0 7px 7px -7px #8f8f8f;
+}
+.scrolled {
+  color: $textSeconsdColor;
+  //opacity: 1;
+  //left: 0;
+  //width: 100%;
+  //padding-left: 20%;
   div {
     color: $textSeconsdColor;
   }
@@ -44,16 +67,17 @@
     left: 10%;
     top: 8vh;
     width: 80%;
-    height: 0;
+    height: 30%;
     padding: 20px;
     position: fixed;
-    display: flex;
+    //display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: black;
-    z-index: 998;
+    //justify-content: space-between;
+    //background-color: black;
+    z-index: 99;
     opacity: 0;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.2s ease-in-out;
   }
   .barsMenu {
     display: block;
@@ -61,10 +85,10 @@
 }
 .mobileClass {
   height: 30%;
-  opacity: 0.9;
-  transition: all 0.3s ease-in-out;
-  justify-content: flex-start;
-    div {
-      margin-bottom: 32px;
-    }
+  opacity: 1;
+  transition: all 0.2s ease-in-out;
+  //justify-content: flex-start;
+    //div {
+    //  margin-bottom: 32px;
+    //}
 }

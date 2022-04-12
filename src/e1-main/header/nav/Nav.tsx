@@ -17,7 +17,12 @@ export const Nav = (props: NavPropsType) => {
 
     const navHiddenClass = !props.headerHidden ? s.nav : `${s.nav} ${s.scrolled}`;
     const navCommonClass = props.collapsedMobileMenu ? navHiddenClass : `${navHiddenClass} ${s.mobileClass}`;
+
     const barsMenuClass = !props.headerHidden ? s.barsMenu : `${s.barsMenu} ${s.scrolled}`;
+
+    const primaryBackground = props.collapsedMobileMenu ? s.hiddenPrimaryBackground
+        : `${s.hiddenPrimaryBackground} ${s.primaryBackground}`;
+    const menuBackground = !props.headerHidden ? primaryBackground : `${primaryBackground} ${s.secondBackground}`;
 
     const underlineHomeMenu = props.underlineMenu.home ? s.onScreen : "";
     const underlineSkillsMenu = props.underlineMenu.skills ? s.onScreen : "";
@@ -36,6 +41,7 @@ export const Nav = (props: NavPropsType) => {
             <FontAwesomeIcon icon={faBars}
                              onClick={() => props.expandMobileMenu()}
                              className={barsMenuClass}/>
+            <div className={menuBackground}/>
         </div>
     );
 }
