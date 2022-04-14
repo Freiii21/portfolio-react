@@ -5,6 +5,7 @@ import {IconDefinition} from '@fortawesome/free-solid-svg-icons';
 
 type SkillPropsType = {
     icon: IconDefinition | string
+    iconColor: IconDefinition | string
     title: string
     description: string
 }
@@ -16,6 +17,12 @@ export const Skill = (props:SkillPropsType) => {
                 {typeof props.icon !== 'string'
                     ? <FontAwesomeIcon icon={props.icon} className={s.icon}/>
                     : <img src={props.icon} alt="icon" className={s.icon}/>
+                }
+            </div>
+            <div className={s.iconColorField}>
+                {typeof props.iconColor !== 'string'
+                    ? <FontAwesomeIcon icon={props.iconColor} className={s.icon}/>
+                    : <img src={props.iconColor} alt="icon" className={s.icon}/>
                 }
             </div>
             <h3 className={s.title}>{props.title}</h3>

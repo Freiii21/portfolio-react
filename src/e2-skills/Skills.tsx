@@ -3,18 +3,20 @@ import s from './Skills.module.scss'
 import sc from './../common/styles/Container.module.scss'
 import {Skill} from './skill/Skill';
 import {Title} from '../common/components/Title';
-import {faReact} from '@fortawesome/free-brands-svg-icons'
-import {faSass} from '@fortawesome/free-brands-svg-icons'
 import {IconDefinition} from '@fortawesome/free-solid-svg-icons';
-import reduxIcon from './../assets/icons/redux.png'
-import tsIcon from './../assets/icons/ts.svg'
-// import tsIcon from './../assets/icons/tsColor.png'
+
 import jsIcon from './../assets/icons/js.svg'
-// import jsIcon from './../assets/icons/jsColor.png'
+import jsIconColor from './../assets/icons/jsColor.png'
+import {faReact} from '@fortawesome/free-brands-svg-icons'
+import reactColor from './../assets/icons/reactColor.png'
+import tsIcon from './../assets/icons/ts.svg'
+import tsIconColor from './../assets/icons/tsColor.png'
+import reduxIcon from './../assets/icons/redux.png'
+import reduxIconColor from './../assets/icons/reduxColor.png'
 import apiIcon from './../assets/icons/api.png'
-// import react from './../assets/icons/reactColor.png'
-import cssIcon from './../assets/icons/css.png'
+import apiIconColor from './../assets/icons/apiColor.png'
 import html_css from './../assets/icons/html_css.png'
+import html_css_Color from './../assets/icons/html_css_Color.png'
 
 type SkillPropsType = {
     skillsRef: MutableRefObject<null | HTMLDivElement>
@@ -22,23 +24,23 @@ type SkillPropsType = {
 
 type skillType = {
     icon: IconDefinition | string
+    iconColor: IconDefinition | string
     title: string
     description: string
 }
 
 export const Skills = (props: SkillPropsType) => {
     const mySkills: Array<skillType> = [
-        {icon: jsIcon, title: 'JavaScript', description: 'Some description...'},
-        {icon: faReact, title: 'React', description: 'Some description...'},
-        {icon: tsIcon, title: 'TypeScript', description: 'Some description...'},
-        {icon: reduxIcon, title: 'Redux', description: 'Some description...'},
-        {icon: apiIcon, title: 'REST API', description: 'Some description...'},
-        {icon: html_css, title:'HTML + CSS', description:'Some description with a loooooong string...'},
-        // {icon: cssIcon, title:'CSS', description:'Some description with a loooooong string...'},
-        // {icon: faSass, title: 'SASS', description: 'Some description with a loooooong string...'},
+        {icon: jsIcon, iconColor: jsIconColor, title: 'JavaScript', description: 'Some description...'},
+        {icon: faReact, iconColor: reactColor, title: 'React', description: 'Some description...'},
+        {icon: tsIcon, iconColor: tsIconColor, title: 'TypeScript', description: 'Some description...'},
+        {icon: reduxIcon, iconColor: reduxIconColor, title: 'Redux', description: 'Some description...'},
+        {icon: apiIcon, iconColor: apiIconColor, title: 'REST API', description: 'Some description...'},
+        {icon: html_css, iconColor: html_css_Color, title:'HTML + CSS', description:'Some description with a loooooong string...'},
     ];
 
     const mySkillsMap = mySkills.map(skill => <Skill icon={skill.icon}
+                                                     iconColor={skill.iconColor}
                                                      title={skill.title}
                                                      description={skill.description}
                                                      key={skill.title}/>);
