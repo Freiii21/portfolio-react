@@ -2,12 +2,11 @@
 @import "./src/common/styles/sass/mixins.scss";
 
 .project {
-  width: 480px;
+  width: 485px;
   height: 290px;
   background-size: cover;
   background-position: center;
-  border: 1px solid black;
-  margin: 0 10px 20px;
+  margin: 0 0 28px;
   position: relative;
   .content {
     position: absolute;
