@@ -61,6 +61,7 @@
 }
 @media screen and (max-height: 730px) {
     .footer {
+        min-height: 30vh;
         .copyrights{
             padding-top: 1vh;
             padding-bottom: 1vh;

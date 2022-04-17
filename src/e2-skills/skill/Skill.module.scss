@@ -11,7 +11,7 @@
     justify-content: space-evenly;
     text-align: center;
     padding: 0 15px;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.1s ease-in-out;
     background-color: #f2f2f2;
     .iconField {
         width: 90px;
@@ -43,7 +43,7 @@
         @include text(Raleway-Bold, sans-serif, 18px);
         text-transform: uppercase;
         color: $textSeconsdColor;
-        transition: all 0.3s ease-in-out;
+        transition: all 0.1s ease-in-out;
     }
     .description {
         @include text(OpenSans-Regular, sans-serif, 16px);
@@ -52,7 +52,7 @@
 }
 .skill:hover {
     background-color: darkgrey;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.1s ease-in-out;
     .iconField {
         display: none;
     }
@@ -61,7 +61,7 @@
     }
     .title {
         color: white;
-        transition: all 0.3s ease-in-out;
+        transition: all 0.1s ease-in-out;
     }
 }
 
