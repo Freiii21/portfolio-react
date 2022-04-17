@@ -10,7 +10,7 @@ type ContactPropsType = {
 export const Contact = (props: ContactPropsType) => {
     return (
         <div>
-            <div style={{marginTop: '-55px', height: '55px'}} ref={props.contactRef}/>
+            <div style={{marginTop: '-6vh', height: '6vh'}} ref={props.contactRef}/>
             <div className={s.contact}>
                 <div className={`${sc.container} ${s.contactContainer}`}>
                     <Title value={'Contact'}/>

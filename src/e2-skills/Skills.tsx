@@ -47,7 +47,7 @@ export const Skills = (props: SkillPropsType) => {
 
     return (
         <div>
-            <div style={{marginTop:"-55px",height:"55px"}} ref={props.skillsRef}/>
+            <div style={{marginTop:"-5.9vh",height:"5.9vh"}} ref={props.skillsRef}/>
             <div className={s.skills}>
                 <div className={`${sc.container} ${s.skillsContainer}`}>
                     <Title value={'Skills'}/>

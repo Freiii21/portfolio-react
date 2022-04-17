@@ -80,7 +80,7 @@ function App() {
             && window.scrollY < skillsRef.current.offsetTop){
             temp = {home: true, skills: false, project: false, contact: false}
         }
-        if(skillsRef.current && projectsRef.current && window.scrollY >= skillsRef.current.offsetTop
+        if(skillsRef.current && projectsRef.current && window.scrollY >= skillsRef.current.offsetTop-10
             && window.scrollY < projectsRef.current.offsetTop){
             temp = {...temp, home: false, skills: true, project: false, contact: false}
         }
