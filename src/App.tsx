@@ -84,11 +84,11 @@ function App() {
             && window.scrollY < projectsRef.current.offsetTop){
             temp = {...temp, home: false, skills: true, project: false, contact: false}
         }
-        if(projectsRef.current && contactRef.current && window.scrollY >= projectsRef.current.offsetTop
+        if(projectsRef.current && contactRef.current && window.scrollY >= projectsRef.current.offsetTop-10
             && window.scrollY < contactRef.current.offsetTop){
             temp = {...temp, home: false, skills: false, project: true, contact: false}
         }
-        if(contactRef.current && window.scrollY >= contactRef.current.offsetTop){
+        if(contactRef.current && window.scrollY >= contactRef.current.offsetTop-10){
             temp = {...temp, home: false, skills: false, project: false, contact: true}
         }
         setUnderlineMenu(temp);

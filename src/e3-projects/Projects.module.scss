@@ -2,7 +2,8 @@
 
 .projects{
     background-color: $bgColor;
-    padding-bottom: 89px;
+    //padding-bottom: 109px;
+    min-height: 94vh;
     .projectsContainer{
         flex-direction: column;
         justify-content: flex-start;
