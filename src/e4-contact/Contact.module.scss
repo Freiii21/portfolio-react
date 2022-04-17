@@ -77,25 +77,88 @@
   .contact {
     .contactContainer {
       .formContainer {
-        margin-top: 20px;
         .inputFields {
           flex-direction: column;
           & input {
-            width: 280px;
+            width: 450px;
             padding: 6px 0;
             margin: 0 15px 0;
           }
         }
         & textarea {
-          width: 280px;
-          padding: 6px 0;
+          width: 450px;
+          min-height: 120px;
+          padding: 11px 0;
           margin: 0 15px 30px;
         }
       }
       button {
-        margin-top: 15px;
-        margin-bottom: 40px;
+        margin-top: 50px;
       }
     }
   }
 }
+@media screen and (max-width: 600px) {
+  .contact {
+    .contactContainer {
+      .formContainer {
+        .inputFields {
+          flex-direction: column;
+          & input {
+            width: 320px;
+          }
+        }
+        & textarea {
+          width: 320px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-height: 800px) {
+  .contact {
+    .contactContainer {
+      .formContainer {
+      }
+      button {
+        margin-top: 30px;
+      }
+    }
+  }
+}
+@media screen and (max-height: 800px) {
+  .contact {
+    .contactContainer {
+      .formContainer {
+      }
+      button {
+        margin-top: 30px;
+      }
+    }
+  }
+}
+@media screen and (max-height: 730px) {
+  .contact {
+    .contactContainer {
+      .formContainer {
+        margin-top: 30px;
+      }
+    }
+  }
+}
+@media screen and (max-height: 670px) {
+  .contact {
+    .contactContainer {
+      .formContainer {
+        margin-top: 20px;
+        & textarea {
+          min-height: 100px;
+        }
+      }
+      button {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+

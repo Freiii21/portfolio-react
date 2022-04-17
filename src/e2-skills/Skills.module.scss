@@ -12,4 +12,30 @@
         }
     }
 }
+@media screen and (max-width: 1177px){
+    .skills{
+        padding-bottom: 4px;
+        .skillsContainer{
+            .skillsSet{
+                justify-content: space-evenly;
+            }
+        }
+    }
+}
+@media screen and (max-width: 784px){
+    .skills{
+        padding-bottom: 22px;
+    }
+}
+@media screen and (max-width: 400px){
+    .skills{
+        padding-bottom: 22px;
+        .skillsContainer{
+            .skillsSet{
+                justify-content: space-between;
+            }
+        }
+    }
+}
+
 

@@ -2,7 +2,6 @@
 
 .projects{
     background-color: $bgColor;
-    //padding-bottom: 109px;
     min-height: 94vh;
     .projectsContainer{
         flex-direction: column;
@@ -12,6 +11,21 @@
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
+        }
+    }
+}
+@media screen and (max-width: 1177px){
+    .projects {
+        min-height: 0;
+        padding-bottom: 22px;
+    }
+}
+@media screen and (max-width: 1128px){
+    .projects{
+        .projectsContainer{
+            .projectsSet{
+                justify-content: space-evenly;
+            }
         }
     }
 }

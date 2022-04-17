@@ -32,7 +32,7 @@ export const Projects = (props: ProjectsPropsType) => {
 
     return (
         <div>
-            <div style={{marginTop: '-6vh', height: '6vh'}} ref={props.projectsRef}/>
+            <div style={{marginTop: '-5.9vh', height: '5.9vh'}} ref={props.projectsRef}/>
             {/*<div style={{marginTop: '-55px', height: '55px'}} ref={props.projectsRef}/>*/}
             <div className={s.projects} >
                 <div className={`${sc.container} ${s.projectsContainer}`}>

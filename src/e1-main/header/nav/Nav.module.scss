@@ -34,7 +34,7 @@
   background-color: black;
   z-index: 98;
   opacity: 0;
-  transition: all 0.2s ease-in-out
+  transition: all 0.3s ease-in-out
 }
 .primaryBackground {
   height: 25%;
@@ -42,6 +42,7 @@
   transition: all 0.2s ease-in-out
 }
 .secondBackground {
+  top: 6vh;
   background-color: white;
   opacity: 1;
   margin-left: -10px;
@@ -68,6 +69,7 @@
     padding: 20px;
     position: fixed;
     display: flex;
+    visibility: hidden;
     flex-direction: column;
     align-items: center;
     z-index: 99;
@@ -77,9 +79,13 @@
   .barsMenu {
     display: block;
   }
+  .scrolled {
+    top: 6vh;
+  }
 }
 .mobileClass {
+  visibility: visible;
   height: 25%;
   opacity: 1;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }

@@ -11,27 +11,59 @@
         @include text(Raleway-Bold, sans-serif, 18px);
         color: $textColor;
         background-color: $bgSecondColor;
-        margin: 25px 0;
+        margin: 3vh 0;
     }
     .footerContainer {
-        width: 320px;
+        width: 80%;
+        height: 45px;
         display: flex;
         justify-content: center;
+        align-items: center;
         .icon {
             color: $textColor;
-            width:45px;
-            height:45px;
+            width: 45px;
+            height: 45px;
             padding: 0 20px;
         }
     }
     .copyrights{
         max-width: 700px;
         text-align: center;
-        padding-top: 30px;
-        padding-bottom: 18px;
-        margin-top: 30px;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+        margin-top: 2vh;
         border-top: 1px solid #343434;
         @include text(OpenSans-Regular, sans-serif, 14px);
         color: $textFifthColor;
+    }
+}
+@media screen and (max-height: 815px) {
+    .footer {
+        .name{
+            @include text(Raleway-Bold, sans-serif, 16px);
+            margin: 3vh 0;
+        }
+        .footerContainer {
+            height: 40px;
+            .icon {
+                width: 40px;
+                height: 40px;
+                padding: 0 20px;
+            }
+        }
+        .copyrights{
+            padding-top: 2vh;
+            padding-bottom: 2vh;
+            margin-top: 2vh;
+            @include text(OpenSans-Regular, sans-serif, 12px);
+        }
+    }
+}
+@media screen and (max-height: 730px) {
+    .footer {
+        .copyrights{
+            padding-top: 1vh;
+            padding-bottom: 1vh;
+        }
     }
 }

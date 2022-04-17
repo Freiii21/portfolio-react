@@ -65,3 +65,39 @@
     }
 }
 
+@media screen and (max-width: 784px){
+    .skill{
+        width: 150px;
+        height: 140px;
+        margin: 0 30px 10px;
+        .iconField {
+            width: 75px;
+            height: 75px;
+            .icon {
+                width: 50px;
+                height: 50px;
+            }
+        }
+        .iconColorField{
+            width: 75px;
+            height: 75px;
+            .icon {
+                width: 50px;
+                height: 50px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 524px){
+    .skill{
+        width: 134px;
+        height: 130px;
+        margin: 0 5px 10px;
+    }
+}
+@media screen and (max-width: 400px){
+    .skill{
+        width: 139px;
+        margin: 0 0 10px;
+    }
+}

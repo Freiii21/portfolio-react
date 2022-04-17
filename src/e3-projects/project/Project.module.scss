@@ -64,10 +64,28 @@
     }
   }
 }
-@media screen and (max-width: 629px){
+@media screen and (max-width: 1212px){
   .project {
-    width: 288px;
-    height: 170px;
+    width: 450px;
+    height: 250px;
     margin: 0 0 10px;
   }
 }
+@media screen and (max-width: 1128px){
+  .project {
+    width: 350px;
+    height: 200px;
+  }
+}
+@media screen and (max-width: 880px){
+  .project {
+    width: 288px;
+    height: 170px;
+  }
+}
+//@media screen and (max-width: 629px){
+//  .project {
+//    width: 288px;
+//    height: 170px;
+//  }
+//}
