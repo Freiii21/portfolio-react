@@ -7,7 +7,7 @@ type HeaderPropsType = {
     scrollFunctions: scrollFunctionsType
     underlineMenu: underlineMenuType
     collapsedMobileMenu: boolean
-    expandMobileMenu: () => void
+    expandMobileMenu: (status: boolean) => void
     headerHidden: boolean
 }
 

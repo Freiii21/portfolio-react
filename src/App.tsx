@@ -21,8 +21,8 @@ export type underlineMenuType = {
 
 function App() {
     const [collapsedMobileMenu, setCollapsedMobileMenu] = useState(true);
-    const expandMobileMenu = () => {
-        setCollapsedMobileMenu(!collapsedMobileMenu);
+    const expandMobileMenu = (status: boolean) => {
+        setCollapsedMobileMenu(status);
     }
 
     const mainRef = useRef<null | HTMLDivElement>(null);

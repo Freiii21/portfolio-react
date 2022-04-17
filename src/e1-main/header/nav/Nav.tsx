@@ -9,7 +9,7 @@ type NavPropsType = {
     scrollFunctions: scrollFunctionsType
     underlineMenu: underlineMenuType
     collapsedMobileMenu: boolean
-    expandMobileMenu: () => void
+    expandMobileMenu: (status: boolean) => void
     headerHidden: boolean
 }
 
@@ -39,7 +39,9 @@ export const Nav = (props: NavPropsType) => {
                 {/*<FontAwesomeIcon icon={faEarth} className={s.icon} onClick={() => alert('aaa')}/>*/}
             </div>
             <FontAwesomeIcon icon={faBars}
-                             onClick={() => props.expandMobileMenu()}
+                             onClick={() => props.expandMobileMenu(!props.collapsedMobileMenu)}
+                             tabIndex={-1}
+                             onBlur={() => props.expandMobileMenu(true)}
                              className={barsMenuClass}/>
             <div className={menuBackground}/>
         </div>

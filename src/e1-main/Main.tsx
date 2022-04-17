@@ -12,7 +12,7 @@ type MainPropsType = {
     headerHidden: boolean
     underlineMenu: underlineMenuType
     collapsedMobileMenu: boolean
-    expandMobileMenu: () => void
+    expandMobileMenu: (status: boolean) => void
     scrollFunctions: scrollFunctionsType
 }
 
