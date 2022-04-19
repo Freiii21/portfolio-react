@@ -2,7 +2,7 @@ import React, {MutableRefObject} from 'react';
 import s from './Skills.module.scss'
 import sc from './../common/styles/Container.module.scss'
 import {Skill} from './skill/Skill';
-import {Title} from '../common/components/Title';
+import {Title} from '../common/components/Title/Title';
 import {IconDefinition} from '@fortawesome/free-solid-svg-icons';
 
 import jsIcon from './../assets/icons/js.svg'
@@ -36,7 +36,12 @@ export const Skills = (props: SkillPropsType) => {
         {icon: tsIcon, iconColor: tsIconColor, title: 'TypeScript', description: 'Some description...'},
         {icon: reduxIcon, iconColor: reduxIconColor, title: 'Redux', description: 'Some description...'},
         {icon: apiIcon, iconColor: apiIconColor, title: 'REST API', description: 'Some description...'},
-        {icon: html_css, iconColor: html_css_Color, title:'HTML + CSS', description:'Some description with a loooooong string...'},
+        {
+            icon: html_css,
+            iconColor: html_css_Color,
+            title: 'HTML + CSS',
+            description: 'Some description with a loooooong string...'
+        },
     ];
 
     const mySkillsMap = mySkills.map(skill => <Skill icon={skill.icon}
@@ -47,13 +52,13 @@ export const Skills = (props: SkillPropsType) => {
 
     return (
         <div>
-            <div style={{marginTop:"-5.9vh",height:"5.9vh"}} ref={props.skillsRef}/>
+            <div style={{marginTop: '-5.9vh', height: '5.9vh'}} ref={props.skillsRef}/>
             <div className={s.skills}>
                 <div className={`${sc.container} ${s.skillsContainer}`}>
                     <Title value={'Skills'}/>
-                    <div className={s.skillsSet}>
-                        {mySkillsMap}
-                    </div>
+                        <div className={s.skillsSet}>
+                            {mySkillsMap}
+                        </div>
                 </div>
             </div>
         </div>

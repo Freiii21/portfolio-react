@@ -10,7 +10,7 @@ type SkillPropsType = {
     description: string
 }
 
-export const Skill = (props:SkillPropsType) => {
+export const Skill = (props: SkillPropsType) => {
     return (
         <div className={s.skill}>
             <div className={s.iconField}>

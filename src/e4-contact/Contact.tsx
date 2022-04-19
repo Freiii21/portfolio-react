@@ -1,7 +1,7 @@
 import React, {MutableRefObject} from 'react';
 import s from './Contact.module.scss'
 import sc from './../common/styles/Container.module.scss'
-import {Title} from '../common/components/Title';
+import {Title} from '../common/components/Title/Title';
 
 type ContactPropsType = {
     contactRef: MutableRefObject<null | HTMLDivElement>

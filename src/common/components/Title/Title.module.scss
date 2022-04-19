@@ -1,5 +1,5 @@
-@import "./src/common/styles/sass/variables.scss";
-@import "./src/common/styles/sass/mixins.scss";
+@import "../../styles/sass/variables";
+@import "../../styles/sass/mixins";
 
 .title{
     @include text(Raleway-SemiBold, sans-serif, 21px);

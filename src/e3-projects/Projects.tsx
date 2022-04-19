@@ -2,7 +2,7 @@ import React, {MutableRefObject} from 'react';
 import s from './Projects.module.scss'
 import sc from './../common/styles/Container.module.scss'
 import {Project} from './project/Project';
-import {Title} from '../common/components/Title';
+import {Title} from '../common/components/Title/Title';
 import counter from '../assets/images/counter.jpg'
 import cards from '../assets/images/cards.jpg'
 import todolist from '../assets/images/todolist.jpg'

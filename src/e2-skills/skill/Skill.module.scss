@@ -64,12 +64,11 @@
         transition: all 0.1s ease-in-out;
     }
 }
-
-@media screen and (max-width: 784px){
+@media screen and (max-width: 800px){
     .skill{
-        width: 150px;
+        width: 49%;
         height: 140px;
-        margin: 0 30px 10px;
+        margin: 0 0 10px;
         .iconField {
             width: 75px;
             height: 75px;
@@ -86,18 +85,5 @@
                 height: 50px;
             }
         }
-    }
-}
-@media screen and (max-width: 524px){
-    .skill{
-        width: 134px;
-        height: 130px;
-        margin: 0 5px 10px;
-    }
-}
-@media screen and (max-width: 370px){
-    .skill{
-        width: 139px;
-        margin: 0 0 10px;
     }
 }

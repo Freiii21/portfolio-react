@@ -40,8 +40,8 @@ export const Nav = (props: NavPropsType) => {
             </div>
             <FontAwesomeIcon icon={faBars}
                              onClick={() => props.expandMobileMenu(!props.collapsedMobileMenu)}
-                             tabIndex={-1}
-                             onBlur={() => props.expandMobileMenu(true)}
+                             // tabIndex={-1}
+                             // onBlur={() => props.expandMobileMenu(true)}
                              className={barsMenuClass}/>
             <div className={menuBackground}/>
         </div>

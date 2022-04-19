@@ -5,6 +5,7 @@ import {Skills} from './e2-skills/Skills';
 import {Projects} from './e3-projects/Projects';
 import {Contact} from './e4-contact/Contact';
 import {Footer} from './e5-footer/Footer';
+import background from './assets/images/background.jpg'
 
 export type scrollFunctionsType = {
     main: () => void
@@ -33,22 +34,22 @@ function App() {
 
     const mainRefScroll = () => {
         setCollapsedMobileMenu(true);
-        mainRef.current && mainRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        mainRef.current && mainRef.current.scrollIntoView({behavior: 'smooth', block: 'start'});
     }
     const skillsRefScroll = () => {
         setCollapsedMobileMenu(true);
-        skillsRef.current && skillsRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        skillsRef.current && skillsRef.current.scrollIntoView({behavior: 'smooth', block: 'start'});
     }
     const projectsRefScroll = () => {
         setCollapsedMobileMenu(true);
-        projectsRef.current && projectsRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        projectsRef.current && projectsRef.current.scrollIntoView({behavior: 'smooth', block: 'start'});
     }
     const contactRefScroll = () => {
         setCollapsedMobileMenu(true);
-        contactRef.current && contactRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        contactRef.current && contactRef.current.scrollIntoView({behavior: 'smooth', block: 'start'});
     }
 
-    const scrollFunctions:scrollFunctionsType = {
+    const scrollFunctions: scrollFunctionsType = {
         main: mainRefScroll,
         skills: skillsRefScroll,
         projects: projectsRefScroll,
@@ -69,30 +70,37 @@ function App() {
     }, []);
 
     const scrollHandler = () => {
-        if(nameRef.current && window.scrollY >= nameRef.current.offsetTop){
+        if (nameRef.current && window.scrollY >= nameRef.current.offsetTop) {
             setHeaderHidden(true);
         } else {
             setHeaderHidden(false);
         }
 
         let temp = underlineMenu;
-        if(mainRef.current && skillsRef.current && window.scrollY >= mainRef.current.offsetTop
-            && window.scrollY < skillsRef.current.offsetTop){
+        if (mainRef.current && skillsRef.current && window.scrollY >= mainRef.current.offsetTop
+            && window.scrollY < skillsRef.current.offsetTop) {
             temp = {home: true, skills: false, project: false, contact: false}
         }
-        if(skillsRef.current && projectsRef.current && window.scrollY >= skillsRef.current.offsetTop-10
-            && window.scrollY < projectsRef.current.offsetTop){
+        if (skillsRef.current && projectsRef.current && window.scrollY >= skillsRef.current.offsetTop - 10
+            && window.scrollY < projectsRef.current.offsetTop) {
             temp = {...temp, home: false, skills: true, project: false, contact: false}
         }
-        if(projectsRef.current && contactRef.current && window.scrollY >= projectsRef.current.offsetTop-10
-            && window.scrollY < contactRef.current.offsetTop){
+        if (projectsRef.current && contactRef.current && window.scrollY >= projectsRef.current.offsetTop - 10
+            && window.scrollY < contactRef.current.offsetTop) {
             temp = {...temp, home: false, skills: false, project: true, contact: false}
         }
-        if(contactRef.current && window.scrollY >= contactRef.current.offsetTop-10){
+        if (contactRef.current && window.scrollY >= contactRef.current.offsetTop - 10) {
             temp = {...temp, home: false, skills: false, project: false, contact: true}
         }
         setUnderlineMenu(temp);
     }
+
+    const [backgroundImageIsLoaded, setBackgroundImageIsLoaded] = useState<boolean>(false)
+    let img = document.createElement('img');
+    img.src = background;
+    img.onload = function () {
+        setBackgroundImageIsLoaded(true)
+    };
 
     return (
         <div className="App">
@@ -102,11 +110,11 @@ function App() {
                   underlineMenu={underlineMenu}
                   collapsedMobileMenu={collapsedMobileMenu}
                   expandMobileMenu={expandMobileMenu}
-                  scrollFunctions={scrollFunctions} />
+                  scrollFunctions={scrollFunctions}/>
             <Skills skillsRef={skillsRef}/>
             <Projects projectsRef={projectsRef}/>
             <Contact contactRef={contactRef}/>
-            <Footer />
+            <Footer/>
         </div>
     );
 }
