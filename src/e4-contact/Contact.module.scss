@@ -153,8 +153,20 @@
 }
 @media screen and (max-height: 500px) {
   .contact {
-    min-height: 94vh;
-    //min-height: 65vh;
+    min-height: 82vh;
+    .contactContainer {
+      .formContainer {
+        margin-top: 10px;
+        & textarea {
+          min-height: 95px;
+          margin-bottom: 20px;
+        }
+      }
+      button {
+        margin-top: 10px;
+        margin-bottom: 35px;
+      }
+    }
   }
 }
 
