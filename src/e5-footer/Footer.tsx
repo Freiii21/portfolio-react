@@ -26,7 +26,7 @@ export const Footer = () => {
             </div>
             <div className={s.copyrights}>
                 <div>Igor © 2022. All Rights Reserved.</div>
-                <div>Made with React.</div>
+                <div>Made using React.</div>
             </div>
         </div>
     );

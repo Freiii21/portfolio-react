@@ -12,8 +12,22 @@
       flex-direction: column;
       align-items: center;
       margin-top: 60px;
+      position: relative;
       .inputFields {
         display: flex;
+        .inputBox{
+          position: relative;
+          .error {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            color: red;
+            font-size: 12px;
+            font-weight: bold;
+          }
+        }
         & input {
           width: 400px;
           height: 42px;
@@ -37,6 +51,19 @@
         resize: none;
         outline: none;
         @include text(OpenSans-Regular, sans-serif, 14px);
+      }
+      .textAreaBox {
+        position: relative;
+        .errorTextArea {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          text-align: center;
+          color: red;
+          font-size: 12px;
+          font-weight: bold;
+        }
       }
     }
     button {
