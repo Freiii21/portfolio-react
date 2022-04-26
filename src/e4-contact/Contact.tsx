@@ -11,115 +11,122 @@ type ContactPropsType = {
 
 export const Contact = (props: ContactPropsType) => {
     const [isSending, setIsSending] = useState<boolean>(false);
-    const [isSendingSuccess, setIsSendingSuccess] = useState<"idle" | "failed" | "success">("failed");
+    const [isSendingStatus, setIsSendingStatus] = useState<"idle" | "success" | "failed" >("idle");
 
-    const successMessageClass = isSendingSuccess !== "success" ? s.messageSuccessHidden : s.messageSuccess;
-    const failedMessageClass = isSendingSuccess !== "failed" ? s.messageFailedHidden : s.messageFailed;
+    const successMessageClass = isSendingStatus !== "success" ? s.messageSuccessHidden : s.messageSuccess;
+    const failedMessageClass = isSendingStatus !== "failed" ? s.messageFailedHidden : s.messageFailed;
 
     const [name, setName] = useState<string>("");
     const [email, setEmail] = useState<string>("");
     const [message, setMessage] = useState<string>("");
 
-    const [nameError, setNameError] = useState<boolean>(false);
-    const [emailError, setEmailError] = useState<boolean>(false);
-    const [messageError, setMessageError] = useState<boolean>(false);
+    const [nameError, setNameError] = useState<string>("");
+    const [emailError, setEmailError] = useState<string>("");
+    const [messageError, setMessageError] = useState<string>("");
 
     const nameClass = nameError ? s.errorInput : "";
     const emailClass = emailError ? s.errorInput : "";
     const messageClass = messageError ? s.errorArea : "";
 
     const onNameChange = (e: ChangeEvent<HTMLInputElement>) => {
-        setNameError(false);
+        setNameError("");
         setName(e.currentTarget.value);
     };
     const onEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
-        setEmailError(false);
+        setEmailError("");
         setEmail(e.currentTarget.value);
     };
     const onMessageChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
-        setMessageError(false);
+        setMessageError("");
         setMessage(e.currentTarget.value);
     };
     const emailRegExp = /^[\w][\w-.]*@[\w-]+\.[a-z]{2,7}$/i;
     const emailValidator = (email: string): boolean => emailRegExp.test(email);
 
     const sendMessage = () => {
-        // axios.post("http://localhost:3010/sendMessage", {
-        //     value: "aaa",
-        //     value2: "bbb"
-        // })
-        //     .then(() => {
-        //         alert("Message sent")
-        //     })
         let errorCounter = 0;
         if (!name) {
-            setNameError(true);
+            setNameError("Name cannot be empty");
             errorCounter += 1;
         }
         if (!emailValidator(email)) {
-            setEmailError(true);
+            setEmailError("Email format is invalid");
             errorCounter += 1;
         }
         if (!message) {
-            setMessageError(true);
+            setMessageError("Message cannot be empty");
             errorCounter += 1;
         }
         if (errorCounter > 0) {
             return;
         }
         setIsSending(true);
-        setTimeout(()=>{
-            console.log(`name: ${name}\nemail: ${email}\nmessage: ${message}`);
-            setIsSending(false);
-        },5000);
-        setTimeout(()=>{
-            setIsSendingSuccess("idle");
-        },10000);
+
+        axios.post('https://mailru-nodejs-heroku.herokuapp.com/sendMessage', {
+            name: name,
+            email: email,
+            message: message
+        }, {timeout: 60000})
+            .then((res) => {
+                setIsSendingStatus('success');
+                setName('');
+                setEmail('');
+                setMessage('');
+            })
+            .catch((err) => {
+                console.log(err.message);
+                setIsSendingStatus('failed');
+            })
+            .finally(() => {
+                    setIsSending(false);
+                    setTimeout(() => {
+                        setIsSendingStatus('idle');
+                    }, 10000);
+                }
+            )
     }
-
-
 
     return (
         <div>
             <div style={{marginTop: '-5.9vh', height: '5.9vh'}} ref={props.contactRef}/>
             <div className={s.contact}>
                 <div className={`${sc.container} ${s.contactContainer}`}>
-                    <Title value={'Contact'}/>
+                    <div style={{zIndex:2}}>
+                        <Title value={'Contact'}/>
+                    </div>
                     <form className={s.formContainer}>
                         <div className={s.inputFields}>
                             <div className={s.inputBox}>
                                 <input placeholder="Name"
                                        value={name}
                                        onChange={onNameChange}
-                                       disabled={isSending}
                                        className={nameClass}/>
-                                {nameError && <div className={s.error}>Name cannot be empty</div>}
+                                {nameError && <div className={s.error}>{nameError}</div>}
                             </div>
                             <div className={s.inputBox}>
                                 <input placeholder="Email"
                                        value={email}
                                        onChange={onEmailChange}
-                                       disabled={isSending}
                                        className={emailClass}/>
-                                {emailError && <div className={s.error}>Email format is invalid</div>}
+                                {emailError && <div className={s.error}>{emailError}</div>}
                             </div>
                         </div>
                         <div className={s.textAreaBox}>
                             <textarea placeholder="Your message"
                                       value={message}
                                       onChange={onMessageChange}
-                                      disabled={isSending}
                                       className={messageClass}/>
-                            {messageError && <div className={s.errorTextArea}>Message cannot be empty</div>}
+                            {messageError && <div className={s.errorTextArea}>{messageError}</div>}
                         </div>
                     </form>
-                    <button onClick={sendMessage} disabled={isSending}>Send message</button>
+                    <button onClick={sendMessage}>Send message</button>
+                    {isSending && <div className={s.backgroundFontOnSendingMessage}/>}
                 </div>
                 {isSending && <div className={s.preloader}>
                     <img src={preloader} alt=""/>
                 </div>}
                 <div className={failedMessageClass}>
-                    Something went wrong.<br/>Please, use other contacts.
+                    Server did not respond in time.<br/>Please, use other contacts.
                 </div>
                 <div className={successMessageClass}>
                     Message sent successfully!<br/>I will contact you soon.

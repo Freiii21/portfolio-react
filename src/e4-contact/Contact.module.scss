@@ -89,10 +89,16 @@
       }
       &:disabled {
         pointer-events: none;
-        background-color: $bgSecondColor;
-        color: $textColor;
-        opacity: 0.8;
       }
+    }
+    .backgroundFontOnSendingMessage{
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: white;
+      opacity: 0.8;
     }
   }
   .preloader{
@@ -100,30 +106,36 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 1;
   }
   .messageFailedHidden{
     @extend .preloader;
     text-align: center;
     padding: 10px;
-    background-color: red;
-    color: white;
+    color: red;
+    font-weight: bold;
+    background-color: #fce9e9;
+    border: 1px solid red;
     border-radius: 3px;
     visibility: hidden;
     opacity: 0;
-    transition: all 1s ease-in-out;
+    transition: all 1s ease-out;
   }
   .messageFailed{
     @extend .messageFailedHidden;
     visibility: visible;
     opacity: 1;
+    transition: 0s;
   }
   .messageSuccessHidden{
     @extend .preloader;
     text-align: center;
     padding: 10px;
-    color: white;
+    color: green;
+    font-weight: bold;
+    background-color: #e6f6e6;
+    border: 1px solid green;
     border-radius: 3px;
-    background-color: green;
     visibility: hidden;
     opacity: 0;
     transition: all 1s ease-in-out;
@@ -132,6 +144,7 @@
     @extend .messageSuccessHidden;
     visibility: visible;
     opacity: 1;
+    transition: 0s;
   }
 }
 
