@@ -17,6 +17,10 @@ export const Contact = (props: ContactPropsType) => {
     const [emailError, setEmailError] = useState<boolean>(false);
     const [messageError, setMessageError] = useState<boolean>(false);
 
+    const nameClass = nameError ? s.nameError : "";
+    const emailClass = emailError ? s.emailError : "";
+    const messageClass = messageError ? s.messageError : "";
+
     const onNameChange = (e: ChangeEvent<HTMLInputElement>) => {
         setNameError(false);
         setName(e.currentTarget.value);
@@ -55,11 +59,11 @@ export const Contact = (props: ContactPropsType) => {
                     <form className={s.formContainer}>
                         <div className={s.inputFields}>
                             <div className={s.inputBox}>
-                                <input placeholder="Name" value={name} onChange={onNameChange}/>
+                                <input placeholder="Name" value={name} onChange={onNameChange} className={nameClass}/>
                                 {nameError && <div className={s.error}>Name cannot be empty</div>}
                             </div>
                             <div className={s.inputBox}>
-                                <input placeholder="Email" value={email} onChange={onEmailChange}/>
+                                <input placeholder="Email" value={email} onChange={onEmailChange} className={emailClass}/>
                                 {emailError && <div className={s.error}>Email format is invalid</div>}
                             </div>
                         </div>
