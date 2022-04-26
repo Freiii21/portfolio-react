@@ -95,12 +95,12 @@ function App() {
         setUnderlineMenu(temp);
     }
 
-    const [backgroundImageIsLoaded, setBackgroundImageIsLoaded] = useState<boolean>(false)
-    let img = document.createElement('img');
-    img.src = background;
-    img.onload = function () {
-        setBackgroundImageIsLoaded(true)
-    };
+    // const [backgroundImageIsLoaded, setBackgroundImageIsLoaded] = useState<boolean>(false)
+    // let img = document.createElement('img');
+    // img.src = background;
+    // img.onload = function () {
+    //     setBackgroundImageIsLoaded(true)
+    // };
 
     return (
         <div className="App">

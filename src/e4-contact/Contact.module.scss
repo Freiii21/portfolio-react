@@ -3,6 +3,7 @@
 
 .contact {
   min-height: 69vh;
+  position: relative;
   .contactContainer {
     flex-direction: column;
     justify-content: flex-start;
@@ -27,7 +28,7 @@
             font-size: 12px;
             font-weight: bold;
           }
-          .nameError {
+          .errorInput {
             border-bottom: 2px solid red;
           }
         }
@@ -67,6 +68,9 @@
           font-size: 12px;
           font-weight: bold;
         }
+        .errorArea {
+          border-bottom: 2px solid red;
+        }
       }
     }
     button {
@@ -79,11 +83,55 @@
       text-transform: uppercase;
       @include text(Raleway-SemiBold, sans-serif, 13px);
       color: $textColor;
+      &:hover {
+        background-color: transparent;
+        color: $textSeconsdColor;
+      }
+      &:disabled {
+        pointer-events: none;
+        background-color: $bgSecondColor;
+        color: $textColor;
+        opacity: 0.8;
+      }
     }
-    button:hover {
-      background-color: transparent;
-      color: $textSeconsdColor;
-    }
+  }
+  .preloader{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .messageFailedHidden{
+    @extend .preloader;
+    text-align: center;
+    padding: 10px;
+    background-color: red;
+    color: white;
+    border-radius: 3px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+  }
+  .messageFailed{
+    @extend .messageFailedHidden;
+    visibility: visible;
+    opacity: 1;
+  }
+  .messageSuccessHidden{
+    @extend .preloader;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    border-radius: 3px;
+    background-color: green;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+  }
+  .messageSuccess{
+    @extend .messageSuccessHidden;
+    visibility: visible;
+    opacity: 1;
   }
 }
 
