@@ -20,8 +20,8 @@ type projectType = {
 
 export const Projects = (props: ProjectsPropsType) => {
     const myProjects: Array<projectType> = [
-        {bgImage: cards, title: 'Cards', link: 'https://freiii21.github.io/react-counter/'},
-        {bgImage: todolist, title: 'Todolist', link: 'https://freiii21.github.io/react-counter/'},
+        {bgImage: cards, title: 'Cards', link: 'https://freiii21.github.io/react-cards/'},
+        {bgImage: todolist, title: 'Todolist', link: 'https://freiii21.github.io/react-todolist/'},
         {bgImage: counter, title: 'Counter', link: 'https://freiii21.github.io/react-counter/'},
         {bgImage: socialNetwork, title: 'Social network', link: 'https://freiii21.github.io/react-social-network/'},
     ];
