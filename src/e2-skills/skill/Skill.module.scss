@@ -51,7 +51,6 @@
     }
 }
 .skill:hover {
-    //border: 1px solid $textSeconsdColor;
     background-color: darkgrey;
     transition: all 0.1s ease-in-out;
     .iconField {
@@ -59,7 +58,6 @@
     }
     .iconColorField{
         display: flex;
-        //background-color: #f2f2f2;
     }
     .title {
         color: white;

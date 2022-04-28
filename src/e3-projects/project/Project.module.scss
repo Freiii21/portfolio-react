@@ -79,13 +79,12 @@
 }
 @media screen and (max-width: 880px){
   .project {
-    width: 288px;
+    width: 320px;
     height: 170px;
   }
 }
-//@media screen and (max-width: 629px){
-//  .project {
-//    width: 288px;
-//    height: 170px;
-//  }
-//}
+@media screen and (max-width: 400px){
+  .project {
+    width: 100%;
+  }
+}
