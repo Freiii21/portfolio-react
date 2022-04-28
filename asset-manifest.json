@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio-react/static/css/main.24b97c5d.css",
-    "main.js": "/portfolio-react/static/js/main.faaf6450.js",
+    "main.js": "/portfolio-react/static/js/main.915a51ce.js",
     "static/js/787.aeca62f9.chunk.js": "/portfolio-react/static/js/787.aeca62f9.chunk.js",
     "static/media/Montserrat-ExtraBold.ttf": "/portfolio-react/static/media/Montserrat-ExtraBold.5daafc620ecc802516f9.ttf",
     "static/media/Raleway-Regular.ttf": "/portfolio-react/static/media/Raleway-Regular.9ade142e81dd8d55cd32.ttf",
@@ -21,11 +21,11 @@
     "static/media/ts.svg": "/portfolio-react/static/media/ts.32da652b7325a8189f4f9c12ffd06650.svg",
     "index.html": "/portfolio-react/index.html",
     "main.24b97c5d.css.map": "/portfolio-react/static/css/main.24b97c5d.css.map",
-    "main.faaf6450.js.map": "/portfolio-react/static/js/main.faaf6450.js.map",
+    "main.915a51ce.js.map": "/portfolio-react/static/js/main.915a51ce.js.map",
     "787.aeca62f9.chunk.js.map": "/portfolio-react/static/js/787.aeca62f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.24b97c5d.css",
-    "static/js/main.faaf6450.js"
+    "static/js/main.915a51ce.js"
   ]
 }
