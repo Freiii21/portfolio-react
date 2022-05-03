@@ -2,88 +2,62 @@
 @import "./src/common/styles/sass/mixins.scss";
 
 .skill{
-    width: 314px;
-    height: 180px;
-    margin: 0 0 28px;
+    width: 33%;
+    //width: 325px;
+    min-height: 220px;
+    margin: 0 0 35px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
     text-align: center;
     padding: 0 15px;
-    transition: all 0.1s ease-in-out;
-    background-color: #f2f2f2;
     .iconField {
-        width: 90px;
-        height: 90px;
+        width: 80px;
+        height: 80px;
+        margin: 0 0 20px;
         border-radius: 100%;
-        background-color: white;
+        border: 1px solid #e3e3e3;
         display: flex;
         justify-content: center;
         align-items: center;
         .icon {
-            width: 60px;
-            height: 60px;
-        }
-    }
-    .iconColorField{
-        display: none;
-        width: 90px;
-        height: 90px;
-        border-radius: 100%;
-        background-color: white;
-        justify-content: center;
-        align-items: center;
-        .icon {
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
         }
     }
     .title {
         @include text(Raleway-Bold, sans-serif, 18px);
         text-transform: uppercase;
         color: $textSeconsdColor;
-        transition: all 0.1s ease-in-out;
+        margin: 0 0 16px;
     }
     .description {
         @include text(OpenSans-Regular, sans-serif, 16px);
         color: $textThirdColor;
+        margin: 0 0 16px;
     }
 }
 .skill:hover {
-    background-color: darkgrey;
-    transition: all 0.1s ease-in-out;
     .iconField {
-        display: none;
-    }
-    .iconColorField{
-        display: flex;
-    }
-    .title {
-        color: white;
-        transition: all 0.1s ease-in-out;
+        border: none;
+        box-shadow: 0 0 15px #e3e3e3;
     }
 }
+
 @media screen and (max-width: 800px){
     .skill{
-        width: 49%;
-        height: 140px;
-        margin: 0 0 10px;
+        width: 100%;
+        min-height: 200px;
+        margin: 0 0 15px;
         .iconField {
-            width: 75px;
-            height: 75px;
-            .icon {
-                width: 50px;
-                height: 50px;
-            }
+            margin: 0 0 10px;
         }
-        .iconColorField{
-            width: 75px;
-            height: 75px;
-            .icon {
-                width: 50px;
-                height: 50px;
-            }
+        .title {
+            margin: 0 0 8px;
+        }
+        .description {
+            @include text(OpenSans-Regular, sans-serif, 15px);
         }
     }
 }
+

@@ -6,17 +6,11 @@ import {Title} from '../common/components/Title/Title';
 import {IconDefinition} from '@fortawesome/free-solid-svg-icons';
 
 import jsIcon from './../assets/icons/js.svg'
-import jsIconColor from './../assets/icons/jsColor.png'
 import {faReact} from '@fortawesome/free-brands-svg-icons'
-import reactColor from './../assets/icons/reactColor.png'
 import tsIcon from './../assets/icons/ts.svg'
-import tsIconColor from './../assets/icons/tsColor.png'
 import reduxIcon from './../assets/icons/redux.png'
-import reduxIconColor from './../assets/icons/reduxColor.png'
 import apiIcon from './../assets/icons/api.png'
-import apiIconColor from './../assets/icons/apiColor.png'
 import html_css from './../assets/icons/html_css.png'
-import html_css_Color from './../assets/icons/html_css_Color.png'
 
 type SkillPropsType = {
     skillsRef: MutableRefObject<null | HTMLDivElement>
@@ -24,28 +18,28 @@ type SkillPropsType = {
 
 type skillType = {
     icon: IconDefinition | string
-    iconColor: IconDefinition | string
     title: string
     description: string
 }
 
 export const Skills = (props: SkillPropsType) => {
     const mySkills: Array<skillType> = [
-        {icon: jsIcon, iconColor: jsIconColor, title: 'JavaScript', description: 'Some description...'},
-        {icon: faReact, iconColor: reactColor, title: 'React', description: 'Some description...'},
-        {icon: tsIcon, iconColor: tsIconColor, title: 'TypeScript', description: 'Some description...'},
-        {icon: reduxIcon, iconColor: reduxIconColor, title: 'Redux', description: 'Some description...'},
-        {icon: apiIcon, iconColor: apiIconColor, title: 'REST API', description: 'Some description...'},
-        {
-            icon: html_css,
-            iconColor: html_css_Color,
-            title: 'HTML + CSS',
-            description: 'Some description with a loooooong string...'
+        {icon: jsIcon, title: 'JavaScript',
+            description: 'Using JavaScript as a standard programming language for making web pages interactive.'},
+        {icon: faReact, title: 'React',
+            description: 'Building SPA with React, one of the most popular JavaScript libraries for developing user interfaces.'},
+        {icon: tsIcon, title: 'TypeScript',
+            description: 'Applying TypeScript to improve readability and reliability of code by adding static typing.'},
+        {icon: reduxIcon, title: 'Redux',
+            description: 'Centralization of application state and logic thanks to the Redux (+Redux Thunk and Redux Toolkit).'},
+        {icon: apiIcon, title: 'REST API',
+            description: 'Ensuring the interaction of the web applications with the servers through the REST API.'},
+        {icon: html_css, title: 'HTML + CSS',
+            description: 'Creation of modern and user-friendly web pages based on classic HTML and CSS technologies.'
         },
     ];
 
     const mySkillsMap = mySkills.map(skill => <Skill icon={skill.icon}
-                                                     iconColor={skill.iconColor}
                                                      title={skill.title}
                                                      description={skill.description}
                                                      key={skill.title}/>);

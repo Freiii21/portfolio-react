@@ -1,7 +1,6 @@
 @import "./src/common/styles/sass/variables.scss";
 
 .skills{
-    padding-bottom: 109px;
     .skillsContainer{
         flex-direction: column;
         .skillsSet{
@@ -12,25 +11,3 @@
         }
     }
 }
-@media screen and (max-width: 1177px){
-    .skills{
-        padding-bottom: 4px;
-        .skillsContainer{
-            .skillsSet{
-                justify-content: space-evenly;
-            }
-        }
-    }
-}
-@media screen and (max-width: 800px){
-    .skills{
-        padding-bottom: 22px;
-        .skillsContainer{
-            .skillsSet{
-                justify-content: space-between;
-            }
-        }
-    }
-}
-
-
