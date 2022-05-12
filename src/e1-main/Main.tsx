@@ -24,7 +24,6 @@ export const Main = (props: MainPropsType) => {
     const photoClass = !props.headerHidden ? s.photo : `${s.photo} ${s.photoScrolled}`;
     const mainFieldHeightStyle = !props.headerHidden ? "88vh" : "100vh";
 
-
     return (
         <div className={s.main} style={backgroundStyle} ref={props.mainRef}>
             <Header scrollFunctions={props.scrollFunctions}
