@@ -31,7 +31,7 @@ export const Skills = (props: SkillPropsType) => {
         {icon: tsIcon, title: 'TypeScript',
             description: 'Applying TypeScript to improve readability and reliability of code by adding static typing.'},
         {icon: reduxIcon, title: 'Redux',
-            description: 'Centralization of application state and logic thanks to the Redux (+Redux Thunk and Redux Toolkit).'},
+            description: 'Centralization of application state and logic thanks to Redux in conjunction with React.'},
         {icon: apiIcon, title: 'REST API',
             description: 'Ensuring the interaction of the web applications with the servers through the REST API.'},
         {icon: html_css, title: 'HTML + CSS',
