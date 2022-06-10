@@ -7,6 +7,7 @@ import counter from '../assets/images/counter.jpg'
 import cards from '../assets/images/cards.jpg'
 import todolist from '../assets/images/todolist.jpg'
 import socialNetwork from '../assets/images/socialNetwork.jpg'
+import portfolio from '../assets/images/portfolio.jpg'
 
 type ProjectsPropsType = {
     projectsRef: MutableRefObject<null | HTMLDivElement>
@@ -23,7 +24,8 @@ export const Projects = (props: ProjectsPropsType) => {
         {bgImage: todolist, title: 'Todolist', link: 'https://freiii21.github.io/react-todolist/'},
         {bgImage: counter, title: 'Counter', link: 'https://freiii21.github.io/react-counter/'},
         {bgImage: socialNetwork, title: 'Social network', link: 'https://freiii21.github.io/react-social-network/'},
-        {bgImage: cards, title: 'Cards', link: 'https://freiii21.github.io/react-cards/'},
+        {bgImage: portfolio, title: 'Portfolio', link: 'https://freiii21.github.io/portfolio-react/'},
+        // {bgImage: cards, title: 'Cards', link: 'https://freiii21.github.io/react-cards/'},
     ];
     const myProjectsMap = myProjects.map(project => <Project bgImage={project.bgImage}
                                                              title={project.title}
