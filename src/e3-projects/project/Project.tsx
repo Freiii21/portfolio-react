@@ -10,6 +10,8 @@ type ProjectPropsType = {
 }
 
 export const Project = (props: ProjectPropsType) => {
+    const targetLink = props.link === "" ? "" : "_blank";
+
     const backgroundImage = {
         backgroundImage: `url(${props.bgImage})`
     };
@@ -18,7 +20,7 @@ export const Project = (props: ProjectPropsType) => {
         <div className={s.project} style={backgroundImage}>
             <div className={s.content}>
                 <div>{props.title}</div>
-                <a href={props.link} target="_blank">
+                <a href={props.link} target={targetLink}>
                     <FontAwesomeIcon icon={faArrowUpRightFromSquare} className={s.icon}/>
                 </a>
             </div>
