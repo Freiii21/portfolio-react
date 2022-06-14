@@ -7,7 +7,7 @@ import counter from '../assets/images/counter.jpg'
 import cards from '../assets/images/cards.jpg'
 import todolist from '../assets/images/todolist.jpg'
 import socialNetwork from '../assets/images/socialNetwork.jpg'
-import portfolio from '../assets/images/portfolio.png'
+import portfolio from '../assets/images/portfolio.jpg'
 
 type ProjectsPropsType = {
     projectsRef: MutableRefObject<null | HTMLDivElement>
