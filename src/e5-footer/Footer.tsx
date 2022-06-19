@@ -11,7 +11,7 @@ export const Footer = () => {
         <div className={s.footer}>
             <div className={s.name}>Igor Titov</div>
             <div className={s.footerContainer}>
-                <a href={'https://www.linkedin.com/in/igor-titov-551279237/'} target={'blank'}>
+                <a href={'https://www.linkedin.com/in/titov-igor/'} target={'blank'}>
                     <FontAwesomeIcon icon={faLinkedin} className={s.icon}/>
                 </a>
                 <a href={'https://github.com/Freiii21'} target={'blank'}>
